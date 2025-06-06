@@ -12,6 +12,7 @@ views:
       - Company
       - Team
       - Role
+      - Departed
     columnSize:
       note.Team: 132
       note.Role: 395
@@ -29,8 +30,14 @@ views:
         - Company == this.file.name
     order:
       - file.name
+      - Team
+      - Departed
       - Role
-    sort: []
+    sort:
+      - column: file.name
+        direction: ASC
+      - column: note.Departed
+        direction: ASC
     columnSize:
       file.name: 182
       note.Role: 371
