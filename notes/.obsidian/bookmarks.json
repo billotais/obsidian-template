@@ -6,6 +6,12 @@
       "items": [
         {
           "type": "group",
+          "ctime": 1749215718619,
+          "items": [],
+          "title": "Bases"
+        },
+        {
+          "type": "group",
           "ctime": 1740925461555,
           "items": [],
           "title": "Projects"
@@ -37,7 +43,14 @@
         {
           "type": "group",
           "ctime": 1740925557253,
-          "items": [],
+          "items": [
+            {
+              "type": "group",
+              "ctime": 1749215718619,
+              "items": [],
+              "title": "Bases"
+            }
+          ],
           "title": "Templates"
         }
       ],

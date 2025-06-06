@@ -22,11 +22,7 @@ views:
       formula.simple_name: 217
       note.Participants: 834
     sort:
-      - column: note.Project
-        direction: ASC
       - column: note.Date
-        direction: ASC
-      - column: formula.simple_name
         direction: DESC
   - type: table
     name: People View

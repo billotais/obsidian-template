@@ -1,6 +1,8 @@
 filters:
   or:
     - tags.contains("Type/Note/Topic")
+formulas:
+  Note Name: link(file.name, file.name.split(" - ")[1])
 properties:
   file.name:
     displayName: Note
@@ -8,21 +10,22 @@ views:
   - type: table
     name: Table
     order:
-      - file.name
       - Project
+      - formula.Note Name
       - Date
     sort:
-      - column: note.Project
-        direction: DESC
       - column: note.Date
-        direction: DESC
+        direction: ASC
+    columnSize:
+      note.Project: 282
+      formula.Note Name: 477
   - type: table
     name: Projects View
     filters:
       or:
         - Project == this.file.name
     order:
-      - file.name
+      - formula.Note Name
       - Date
       - Topics
     sort:
@@ -36,7 +39,7 @@ views:
       or:
         - Topics.contains(this.file.name)
     order:
-      - file.name
+      - formula.Note Name
       - Date
     sort:
       - column: note.Date
@@ -50,7 +53,7 @@ views:
         - file.hasLink(this.file.name)
     order:
       - Project
-      - file.name
+      - formula.Note Name
       - Date
     sort:
       - column: note.Project

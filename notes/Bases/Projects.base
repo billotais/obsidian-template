@@ -6,6 +6,8 @@ filters:
     - tags.contains("Type/Project/Internship")
     - tags.contains("Type/Project/Administration")
     - tags.contains("Type/Project/Project")
+formulas:
+  Project Name: link(file.name, file.name.split(" - ")[1])
 properties:
   file.name:
     displayName: Project
@@ -13,26 +15,28 @@ views:
   - type: table
     name: Table
     order:
-      - file.name
+      - formula.Project Name
       - Client
       - Active
       - Team
       - Manager
     sort:
+      - column: formula.Project Name
+        direction: ASC
       - column: file.name
         direction: ASC
       - column: note.Company
         direction: ASC
     columnSize:
-      note.Team: 801
+      formula.Project Name: 235
+      note.Team: 725
   - type: table
     name: Client View
     filters:
       and:
         - Client == this.file.name
     order:
-      - file.name
-      - Client
+      - formula.Project Name
       - Active
       - Team
       - Manager
@@ -49,7 +53,7 @@ views:
         - Manager.contains(this.file.name)
     order:
       - Client
-      - file.name
+      - formula.Project Name
       - Active
     sort:
       - column: note.Client
@@ -58,3 +62,24 @@ views:
         direction: ASC
     columnSize:
       note.Team: 801
+  - type: table
+    name: Active Projects
+    filters:
+      and:
+        - Active == true
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Team
+      - Manager
+    sort:
+      - column: formula.Project Name
+        direction: ASC
+      - column: file.name
+        direction: ASC
+      - column: note.Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Team: 725

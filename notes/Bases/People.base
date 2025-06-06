@@ -14,11 +14,11 @@ views:
     columnSize:
       note.Role: 395
     sort:
+      - column: note.Company
+        direction: ASC
       - column: file.name
         direction: ASC
       - column: note.Role
-        direction: ASC
-      - column: note.Company
         direction: ASC
   - type: table
     name: Company View
@@ -30,4 +30,5 @@ views:
       - Role
     sort: []
     columnSize:
+      file.name: 182
       note.Role: 371
