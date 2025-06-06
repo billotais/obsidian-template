@@ -10,6 +10,7 @@ Team:
 Manager: []
 Technologies: 
 Summary:
+Stage:
 tags:
   - Type/Project
 ---

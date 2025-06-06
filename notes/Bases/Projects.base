@@ -18,6 +18,7 @@ views:
       - formula.Project Name
       - Client
       - Active
+      - Stage
       - Team
       - Manager
     sort:
@@ -38,6 +39,7 @@ views:
     order:
       - formula.Project Name
       - Active
+      - Stage
       - Team
       - Manager
     sort:
@@ -55,6 +57,7 @@ views:
       - Client
       - formula.Project Name
       - Active
+      - Stage
     sort:
       - column: note.Client
         direction: ASC
@@ -71,6 +74,7 @@ views:
       - formula.Project Name
       - Client
       - Active
+      - Stage
       - Team
       - Manager
     sort:
@@ -82,4 +86,5 @@ views:
         direction: ASC
     columnSize:
       formula.Project Name: 235
+      note.Stage: 153
       note.Team: 725
