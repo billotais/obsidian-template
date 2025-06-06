@@ -12,27 +12,13 @@ tags:
 > A #Type/Person  can be created as a sort of "contact card" All projects, meetings, notes and daily notes refering to this person will show up here.
 
 > [!success] Projects
-> ```dataview
-> TABLE rows.file.link as "Project" FROM #Type/Project 
-> WHERE contains(file.outlinks, this.file.link)
-> GROUP BY Client
-> ```
+> ![[Projects.base#People View]]
 
 > [!quote] Meetings
-> ```dataview
-> TABLE rows.file.link as "Meeting" FROM #Type/Meeting
-> WHERE contains(file.outlinks, this.file.link)
-> SORT  DATE DESC
-> GROUP BY Project
-> 
-> ```
+> ![[Meetings.base#People View]]
 
 > [!example] Notes
-> ```dataview
-> TABLE rows.file.link as "Note" FROM #Type/Note/Topic  
-> WHERE contains(file.outlinks, this.file.link)
-> GROUP BY Project
-> ```
+> ![[Notes.base#People View]]
 
 > [!summary] Daily Activities and News
 > ```dataview

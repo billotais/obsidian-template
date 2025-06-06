@@ -1,0 +1,33 @@
+filters:
+  and:
+    - tags.contains("Type/Person")
+properties:
+  file.name:
+    displayName: Person
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - Company
+      - Role
+    columnSize:
+      note.Role: 395
+    sort:
+      - column: file.name
+        direction: ASC
+      - column: note.Role
+        direction: ASC
+      - column: note.Company
+        direction: ASC
+  - type: table
+    name: Company View
+    filters:
+      and:
+        - Company == this.file.name
+    order:
+      - file.name
+      - Role
+    sort: []
+    columnSize:
+      note.Role: 371

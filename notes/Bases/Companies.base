@@ -1,0 +1,67 @@
+filters:
+  or:
+    - tags.contains("Type/Meeting/Interview")
+    - tags.contains("Type/Meeting/Catchup")
+    - tags.contains("Type/Meeting/Group")
+properties:
+  file.name:
+    displayName: Meeting
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - Project
+      - Participants
+    columnSize:
+      note.Participants: 1009
+  - type: table
+    name: People View
+    filters:
+      or:
+        - Participants.contains(this.file.name)
+    order:
+      - Project
+      - file.name
+      - Date
+    columnSize:
+      note.Participants: 1009
+    sort:
+      - column: note.Project
+        direction: ASC
+  - type: table
+    name: Projects View
+    filters:
+      or:
+        - Project == this.file.name
+    order:
+      - file.name
+      - Date
+      - Participants
+    columnSize:
+      note.Participants: 1009
+    sort:
+      - column: note.Date
+        direction: ASC
+      - column: note.Participants
+        direction: ASC
+      - column: note.Project
+        direction: ASC
+  - type: table
+    name: Topics View
+    filters:
+      or:
+        - Topics.contains(this.file.name)
+    order:
+      - file.name
+      - Date
+      - Participants
+    columnSize:
+      note.Participants: 1009
+    sort:
+      - column: note.Date
+        direction: ASC
+      - column: note.Participants
+        direction: ASC
+      - column: note.Project
+        direction: ASC

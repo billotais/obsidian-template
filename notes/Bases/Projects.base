@@ -1,0 +1,60 @@
+filters:
+  or:
+    - tags.contains("Type/Project")
+    - tags.contains("Type/Project/PoC")
+    - tags.contains("Type/Project/Conference")
+    - tags.contains("Type/Project/Internship")
+    - tags.contains("Type/Project/Administration")
+    - tags.contains("Type/Project/Project")
+properties:
+  file.name:
+    displayName: Project
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - Client
+      - Active
+      - Team
+      - Manager
+    sort:
+      - column: file.name
+        direction: ASC
+      - column: note.Company
+        direction: ASC
+    columnSize:
+      note.Team: 801
+  - type: table
+    name: Client View
+    filters:
+      and:
+        - Client == this.file.name
+    order:
+      - file.name
+      - Client
+      - Active
+      - Team
+      - Manager
+    sort:
+      - column: note.Company
+        direction: ASC
+    columnSize:
+      note.Team: 801
+  - type: table
+    name: People View
+    filters:
+      or:
+        - Team.contains(this.file.name)
+        - Manager.contains(this.file.name)
+    order:
+      - Client
+      - file.name
+      - Active
+    sort:
+      - column: note.Client
+        direction: ASC
+      - column: note.Company
+        direction: ASC
+    columnSize:
+      note.Team: 801

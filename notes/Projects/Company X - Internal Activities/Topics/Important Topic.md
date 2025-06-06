@@ -13,19 +13,11 @@ tags:
 
 
 > [!quote] Meetings
-> ```dataview
-> TABLE Participants FROM #Type/Meeting
-> WHERE  contains(file.outlinks, this.file.link)
-> SORT Date Desc
-> ```
+> ![[Meetings.base#Topics View]]
 
 > [!NOTE] Notes
-> ```dataview
-> TABLE Date FROM #Type/Note/Topic 
-> WHERE  contains(file.outlinks, this.file.link)
-> Sort Date DESC
-> ```
-> 
+> ![[Notes.base#Topics View]]
+
 
 ------------------------------
 

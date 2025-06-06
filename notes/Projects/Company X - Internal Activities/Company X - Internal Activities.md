@@ -21,31 +21,19 @@ tags:
 # Description
 
 [[Company X - Internal Activities]] is a project at [[Company X]]
-# Topic
+
+# Topics
 
 > [!task] Topics
-> ```dataview
-> Table Description, Started, Completed  FROM #Type/Topic 
-> WHERE Project = this.file.link
-> SORT Date Desc
-> ```
+> ![[Topics.base#Projects View]]
 
 # History
 
 > [!quote] Meetings
-> ```dataview
-> TABLE Participants, Topics FROM #Type/Meeting
-> WHERE Project = this.file.link
-> SORT Date Desc
-> ```
+> ![[Meetings.base#Projects View]]
 
 > [!NOTE] Notes
-> ```dataview
-> TABLE Date, Topics FROM #Type/Note/Topic 
-> WHERE Project = this.file.link and !Archived
-> Sort Date DESC
-> ```
-> 
+![[Notes.base#Projects View]]
 
 > [!example] Open Tasks
 > ```dataview

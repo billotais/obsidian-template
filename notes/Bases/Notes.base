@@ -1,0 +1,59 @@
+filters:
+  or:
+    - tags.contains("Type/Note/Topic")
+properties:
+  file.name:
+    displayName: Note
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - Project
+      - Date
+    sort:
+      - column: note.Project
+        direction: DESC
+      - column: note.Date
+        direction: DESC
+  - type: table
+    name: Projects View
+    filters:
+      or:
+        - Project == this.file.name
+    order:
+      - file.name
+      - Date
+      - Topics
+    sort:
+      - column: note.Date
+        direction: DESC
+      - column: note.Project
+        direction: DESC
+  - type: table
+    name: Topics View
+    filters:
+      or:
+        - Topics.contains(this.file.name)
+    order:
+      - file.name
+      - Date
+    sort:
+      - column: note.Date
+        direction: DESC
+      - column: note.Project
+        direction: DESC
+  - type: table
+    name: People View
+    filters:
+      or:
+        - file.hasLink(this.file.name)
+    order:
+      - Project
+      - file.name
+      - Date
+    sort:
+      - column: note.Project
+        direction: ASC
+      - column: note.Date
+        direction: ASC
