@@ -14,11 +14,7 @@ cssclasses:
 
 
 > [!example] Meetings of the day
-> ```dataview
-> TABLE Project, Participants 
-> FROM #Type/Meeting 
-> WHERE Date = this.Date
-> ```
+> ![[Meetings.base#Daily View]]
 
 > [!multi-column]
 >

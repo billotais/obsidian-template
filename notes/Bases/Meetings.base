@@ -3,18 +3,31 @@ filters:
     - tags.contains("Type/Meeting/Interview")
     - tags.contains("Type/Meeting/Catchup")
     - tags.contains("Type/Meeting/Group")
+formulas:
+  simple_name: link(file.name, file.name.split(" - ")[0])
 properties:
   file.name:
     displayName: Meeting
+  formula.simple_name:
+    displayName: Meeting Name
 views:
   - type: table
     name: Table
     order:
-      - file.name
+      - formula.simple_name
+      - Date
       - Project
       - Participants
     columnSize:
-      note.Participants: 1009
+      formula.simple_name: 217
+      note.Participants: 834
+    sort:
+      - column: note.Project
+        direction: ASC
+      - column: note.Date
+        direction: ASC
+      - column: formula.simple_name
+        direction: DESC
   - type: table
     name: People View
     filters:
@@ -22,7 +35,7 @@ views:
         - Participants.contains(this.file.name)
     order:
       - Project
-      - file.name
+      - formula.simple_name
       - Date
     columnSize:
       note.Participants: 1009
@@ -35,7 +48,7 @@ views:
       or:
         - Project == this.file.name
     order:
-      - file.name
+      - formula.simple_name
       - Date
       - Participants
     columnSize:
@@ -53,7 +66,7 @@ views:
       or:
         - Topics.contains(this.file.name)
     order:
-      - file.name
+      - formula.simple_name
       - Date
       - Participants
     columnSize:
@@ -65,3 +78,18 @@ views:
         direction: ASC
       - column: note.Project
         direction: ASC
+  - type: table
+    name: Daily View
+    filters:
+      and:
+        - Date == this.Date
+    order:
+      - formula.simple_name
+      - Project
+      - Participants
+    sort:
+      - column: note.Project
+        direction: ASC
+    columnSize:
+      file.name: 408
+      note.Project: 255
