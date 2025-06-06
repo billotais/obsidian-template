@@ -10,6 +10,7 @@ Last Name: <% lastName %>
 Company: '[[<% clientName %>]]'
 Role: 
 Hierarchy:
+Team:
 tags:
   - Type/Person
 ---

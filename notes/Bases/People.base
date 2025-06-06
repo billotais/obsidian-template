@@ -10,8 +10,10 @@ views:
     order:
       - file.name
       - Company
+      - Team
       - Role
     columnSize:
+      note.Team: 132
       note.Role: 395
     sort:
       - column: note.Company
