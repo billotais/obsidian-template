@@ -9,8 +9,8 @@ views:
     name: Table
     order:
       - file.name
+      - Division
       - Company
-      - Team
       - Role
       - Departed
     columnSize:
@@ -30,7 +30,7 @@ views:
         - Company == this.file.name
     order:
       - file.name
-      - Team
+      - Division
       - Departed
       - Role
     sort:
@@ -41,3 +41,45 @@ views:
     columnSize:
       file.name: 182
       note.Role: 371
+  - type: table
+    name: ELCA
+    filters:
+      and:
+        - Company == "ELCA"
+    order:
+      - file.name
+      - Company
+      - Division
+      - Role
+      - Departed
+    columnSize:
+      note.Team: 132
+      note.Role: 395
+    sort:
+      - column: note.Company
+        direction: ASC
+      - column: file.name
+        direction: ASC
+      - column: note.Role
+        direction: ASC
+  - type: table
+    name: Clients
+    filters:
+      and:
+        - Company != link("ELCA")
+    order:
+      - file.name
+      - Company
+      - Division
+      - Role
+      - Departed
+    columnSize:
+      note.Team: 132
+      note.Role: 395
+    sort:
+      - column: note.Company
+        direction: ASC
+      - column: file.name
+        direction: ASC
+      - column: note.Role
+        direction: ASC

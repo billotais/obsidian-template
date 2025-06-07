@@ -33,6 +33,8 @@ views:
         direction: DESC
       - column: note.Project
         direction: DESC
+    columnSize:
+      formula.Note Name: 210
   - type: table
     name: Topics View
     filters:

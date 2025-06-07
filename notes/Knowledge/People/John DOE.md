@@ -3,9 +3,10 @@ First Name: John
 Last Name: DOE
 Company: "[[Company X]]"
 Role: CEO
-Hierarchy: 
+Hierarchy:
 tags:
   - Type/Person
+Division: Data & AI
 ---
 
 > [!INFO] Readme

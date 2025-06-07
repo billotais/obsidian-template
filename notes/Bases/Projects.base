@@ -19,6 +19,9 @@ views:
       - Client
       - Active
       - Stage
+      - Start Date
+      - End Date
+      - Summary
       - Team
       - Manager
     sort:
@@ -30,6 +33,10 @@ views:
         direction: ASC
     columnSize:
       formula.Project Name: 235
+      note.Stage: 184
+      note.Start Date: 149
+      note.End Date: 173
+      note.Summary: 438
       note.Team: 725
   - type: table
     name: Client View
@@ -40,6 +47,9 @@ views:
       - formula.Project Name
       - Active
       - Stage
+      - Start Date
+      - End Date
+      - Summary
       - Team
       - Manager
     sort:
@@ -58,6 +68,9 @@ views:
       - formula.Project Name
       - Active
       - Stage
+      - Summary
+      - Start Date
+      - End Date
     sort:
       - column: note.Client
         direction: ASC
@@ -75,6 +88,9 @@ views:
       - Client
       - Active
       - Stage
+      - Start Date
+      - End Date
+      - Summary
       - Team
       - Manager
     sort:
@@ -87,4 +103,39 @@ views:
     columnSize:
       formula.Project Name: 235
       note.Stage: 153
+      note.Summary: 626
+      note.Team: 725
+  - type: table
+    name: Active Client Projects
+    filters:
+      and:
+        - Active == true
+        - Client != link("ELCA")
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Manager
+      - Team
+    sort:
+      - column: note.Stage
+        direction: DESC
+      - column: formula.Project Name
+        direction: DESC
+      - column: note.Manager
+        direction: ASC
+      - column: file.name
+        direction: ASC
+      - column: note.Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Stage: 153
+      note.Start Date: 139
+      note.End Date: 173
+      note.Summary: 474
       note.Team: 725

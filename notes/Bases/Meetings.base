@@ -34,7 +34,7 @@ views:
       - formula.simple_name
       - Date
     columnSize:
-      note.Participants: 1009
+      formula.simple_name: 165
     sort:
       - column: note.Project
         direction: ASC
@@ -51,7 +51,7 @@ views:
       note.Participants: 1009
     sort:
       - column: note.Date
-        direction: ASC
+        direction: DESC
       - column: note.Participants
         direction: ASC
       - column: note.Project

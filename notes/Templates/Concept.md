@@ -2,7 +2,7 @@
 Provider: 
 tags: Type/Concept
 aliases: 
-Related:
+Related: 
 ---
 # Projects
 ```dataview

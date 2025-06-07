@@ -10,6 +10,9 @@ Technologies:
 Summary: This is an internal project
 tags:
   - Type/Project
+Stage: ongoing
+Start Date: 2025-01-01
+End Date: 2025-12-31
 ---
 # Admin
 

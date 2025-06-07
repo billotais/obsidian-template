@@ -2,7 +2,6 @@
 tags:
   - Type/Company
 ---
-
 # Projects
 ![[Projects.base#Client View]]
 

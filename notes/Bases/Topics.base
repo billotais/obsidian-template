@@ -10,6 +10,14 @@ views:
     order:
       - file.name
       - Project
+      - Description
+      - Started
+      - Completed
+    sort:
+      - column: note.Project
+        direction: ASC
+    columnSize:
+      note.Description: 569
   - type: table
     name: Projects View
     filters:
