@@ -7,19 +7,12 @@ tags:
 > A #Type/Company can be created to group people or projects together. This page will automatically show all projects and people related to the company
 
 # Projects
-```dataview
-TABLE Summary
-FROM #Type/Project
-WHERE Client = this.file.link
-
-```
+![[Projects.base#Client View]]
 
 # People
-```dataview
-TABLE Role
-FROM #Type/Person
-WHERE Company = this.file.link
-```
+![[People.base#Company View]]
+
+
 
 
 *This is an example `Company`, named [[Company X]]*

@@ -214,3 +214,21 @@ views:
       note.Stage: 153
       note.Summary: 626
       note.Team: 725
+  - type: table
+    name: Concept View
+    filters:
+      and:
+        - file.links.contains(this.file)
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Summary
+    sort:
+      - property: Company
+        direction: ASC
+    columnSize:
+      note.Active: 95
+      note.Stage: 235
+      note.Summary: 278

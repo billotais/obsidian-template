@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Topic.md",
+                "file": "Knowledge/People/John DOE.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Topic"
+              "title": "John DOE"
             }
           }
         ]
@@ -200,13 +200,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templates/Topic.md",
+                "file": "Knowledge/People/John DOE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Topic"
+              "title": "Outline of John DOE"
             }
           },
           {
@@ -287,6 +287,11 @@
   },
   "active": "776c37251cf9077d",
   "lastOpenFiles": [
+    "Knowledge/Concepts/Python.md",
+    "Knowledge/Companies/Company X.md",
+    "Knowledge/Companies/Obsidian.md",
+    "Projects/Company X - Internal Activities/Company X - Internal Activities.md",
+    "Templates/Topic.md",
     "Templates/Project.md",
     "Templates/Person.md",
     "Templates/Note.md",
@@ -304,7 +309,6 @@
     "Agenda/2025-08-14.md",
     "Agenda/2025-06-28.md",
     "Agenda/2025-06-21.md",
-    "Projects/Company X - Internal Activities/Company X - Internal Activities.md",
     "Projects/Company X - Internal Activities/Topics/Important Topic.md",
     "Bases/Topics copy.base",
     "Bases/Projects copy.base",
@@ -317,12 +321,8 @@
     "Agenda/2025-06-06.md",
     "Agenda/2025-03-17.md",
     "QUICKSTART.md",
-    "Knowledge/Companies/Company X.md",
     "Projects/Company X - Internal Activities/Notes/Company X - Note.md",
     "Agenda/2025-02-03.md",
-    "Agenda/2025-03-05.md",
-    "Agenda/2025-03-07.md",
-    "Media/excalidraw/Drawing 2025-03-02 15.58.36.excalidraw.md",
     "_attachments/Pasted image 20250302153722.png",
     "_attachments/Pasted image 20250302153646.png",
     "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302150425.png",

@@ -89,3 +89,13 @@ views:
       note.Project: 343
       formula.Note Name: 250
       note.Summary: 359
+  - type: table
+    name: Concept View
+    filters:
+      and:
+        - file.links.contains(this.file)
+    order:
+      - file.name
+      - Project
+    columnSize:
+      file.name: 312
