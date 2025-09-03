@@ -8,17 +8,21 @@ properties:
     displayName: Note
 views:
   - type: table
-    name: Table
+    name: Latest 100
     order:
       - Project
       - formula.Note Name
       - Date
+      - Summary
     sort:
-      - column: note.Date
+      - property: Date
         direction: ASC
+    limit: 100
     columnSize:
       note.Project: 282
       formula.Note Name: 477
+      note.Date: 179
+      note.Summary: 478
   - type: table
     name: Projects View
     filters:
@@ -28,13 +32,17 @@ views:
       - formula.Note Name
       - Date
       - Topics
+      - Summary
     sort:
-      - column: note.Date
+      - property: Date
         direction: DESC
-      - column: note.Project
+      - property: Summary
+        direction: ASC
+      - property: Project
         direction: DESC
     columnSize:
       formula.Note Name: 210
+      note.Summary: 365
   - type: table
     name: Topics View
     filters:
@@ -43,10 +51,11 @@ views:
     order:
       - formula.Note Name
       - Date
+      - Summary
     sort:
-      - column: note.Date
+      - property: Date
         direction: DESC
-      - column: note.Project
+      - property: Project
         direction: DESC
   - type: table
     name: People View
@@ -57,8 +66,26 @@ views:
       - Project
       - formula.Note Name
       - Date
+      - Summary
     sort:
-      - column: note.Project
+      - property: Project
         direction: ASC
-      - column: note.Date
+      - property: Date
         direction: ASC
+  - type: table
+    name: Modified Today
+    filters:
+      and:
+        - file.mtime == this.date
+    order:
+      - Project
+      - formula.Note Name
+      - Date
+      - Summary
+    sort:
+      - property: Date
+        direction: ASC
+    columnSize:
+      note.Project: 343
+      formula.Note Name: 250
+      note.Summary: 359

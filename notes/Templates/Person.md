@@ -11,7 +11,7 @@ Company: '[[<% clientName %>]]'
 Role: 
 Hierarchy:
 Division:
-Departed:
+Departed: false
 tags:
   - Type/Person
 ---

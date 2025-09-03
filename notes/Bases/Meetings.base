@@ -12,18 +12,19 @@ properties:
     displayName: Meeting Name
 views:
   - type: table
-    name: Table
+    name: Latest 100
     order:
-      - formula.simple_name
+      - file
       - Date
       - Project
       - Participants
-    columnSize:
-      formula.simple_name: 217
-      note.Participants: 834
     sort:
-      - column: note.Date
+      - property: Date
         direction: DESC
+    limit: 100
+    columnSize:
+      note.Date: 194
+      note.Participants: 834
   - type: table
     name: People View
     filters:
@@ -33,29 +34,33 @@ views:
       - Project
       - formula.simple_name
       - Date
-    columnSize:
-      formula.simple_name: 165
+      - file
     sort:
-      - column: note.Project
+      - property: Date
+        direction: DESC
+      - property: Project
         direction: ASC
+    columnSize:
+      formula.simple_name: 264
   - type: table
     name: Projects View
     filters:
       or:
         - Project == this.file.name
     order:
+      - file
       - formula.simple_name
       - Date
       - Participants
-    columnSize:
-      note.Participants: 1009
     sort:
-      - column: note.Date
+      - property: Date
         direction: DESC
-      - column: note.Participants
+      - property: Participants
         direction: ASC
-      - column: note.Project
+      - property: Project
         direction: ASC
+    columnSize:
+      note.Participants: 792
   - type: table
     name: Topics View
     filters:
@@ -65,27 +70,32 @@ views:
       - formula.simple_name
       - Date
       - Participants
+    sort:
+      - property: Date
+        direction: ASC
+      - property: Participants
+        direction: ASC
+      - property: Project
+        direction: ASC
     columnSize:
       note.Participants: 1009
-    sort:
-      - column: note.Date
-        direction: ASC
-      - column: note.Participants
-        direction: ASC
-      - column: note.Project
-        direction: ASC
   - type: table
     name: Daily View
     filters:
       and:
         - Date == this.Date
     order:
-      - formula.simple_name
+      - file
       - Project
       - Participants
     sort:
-      - column: note.Project
+      - property: file
         direction: ASC
+      - property: Project
+        direction: DESC
+      - property: formula.simple_name
+        direction: DESC
     columnSize:
-      file.name: 408
+      file.file: 336
       note.Project: 255
+      note.Participants: 646

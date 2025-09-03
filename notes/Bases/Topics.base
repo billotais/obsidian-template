@@ -14,7 +14,7 @@ views:
       - Started
       - Completed
     sort:
-      - column: note.Project
+      - property: Project
         direction: ASC
     columnSize:
       note.Description: 569
@@ -29,9 +29,9 @@ views:
       - Started
       - Completed
     sort:
-      - column: note.Description
+      - property: Description
         direction: ASC
-      - column: note.Topics
+      - property: Topics
         direction: ASC
     columnSize:
       file.name: 294

@@ -13,16 +13,16 @@ views:
       - Company
       - Role
       - Departed
+    sort:
+      - property: Company
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: Role
+        direction: ASC
     columnSize:
       note.Team: 132
       note.Role: 395
-    sort:
-      - column: note.Company
-        direction: ASC
-      - column: file.name
-        direction: ASC
-      - column: note.Role
-        direction: ASC
   - type: table
     name: Company View
     filters:
@@ -34,9 +34,9 @@ views:
       - Departed
       - Role
     sort:
-      - column: file.name
+      - property: file.name
         direction: ASC
-      - column: note.Departed
+      - property: Departed
         direction: ASC
     columnSize:
       file.name: 182
@@ -52,16 +52,16 @@ views:
       - Division
       - Role
       - Departed
+    sort:
+      - property: Company
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: Role
+        direction: ASC
     columnSize:
       note.Team: 132
       note.Role: 395
-    sort:
-      - column: note.Company
-        direction: ASC
-      - column: file.name
-        direction: ASC
-      - column: note.Role
-        direction: ASC
   - type: table
     name: Clients
     filters:
@@ -73,13 +73,13 @@ views:
       - Division
       - Role
       - Departed
+    sort:
+      - property: Company
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: Role
+        direction: ASC
     columnSize:
       note.Team: 132
       note.Role: 395
-    sort:
-      - column: note.Company
-        direction: ASC
-      - column: file.name
-        direction: ASC
-      - column: note.Role
-        direction: ASC

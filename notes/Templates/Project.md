@@ -11,7 +11,7 @@ Manager: []
 Technologies: 
 Summary:
 Stage:
-Start Date:
+Start Date: '[[<% tp.date.now("YYYY-MM-DD") %>]]'
 End Date:
 tags:
   - Type/Project

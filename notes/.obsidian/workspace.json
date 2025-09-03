@@ -11,13 +11,15 @@
             "id": "776c37251cf9077d",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Bases/Projects.base",
-                "viewName": "Table"
+                "file": "Templates/Topic.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-layout-list",
-              "title": "Projects"
+              "icon": "lucide-file",
+              "title": "Topic"
             }
           }
         ]
@@ -198,13 +200,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bases/Projects.base",
+                "file": "Templates/Topic.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Projects"
+              "title": "Outline of Topic"
             }
           },
           {
@@ -269,6 +271,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -284,19 +287,29 @@
   },
   "active": "776c37251cf9077d",
   "lastOpenFiles": [
-    "Bases/Topics.base",
-    "Bases/Companies.base",
+    "Templates/Project.md",
+    "Templates/Person.md",
+    "Templates/Note.md",
+    "Templates/Meeting.md",
+    "Templates/Daily Note.md",
+    "Templates/Concept.md",
+    "Templates/Company.md",
+    "Agenda/2025-09-03.md",
     "Bases/Meetings.base",
-    "Bases/Notes.base",
-    "Bases/People.base",
+    "Bases/Companies.base",
+    "Bases/Topics.base",
     "Bases/Projects.base",
+    "Bases/People.base",
+    "Bases/Notes.base",
+    "Agenda/2025-08-14.md",
+    "Agenda/2025-06-28.md",
+    "Agenda/2025-06-21.md",
     "Projects/Company X - Internal Activities/Company X - Internal Activities.md",
     "Projects/Company X - Internal Activities/Topics/Important Topic.md",
     "Bases/Topics copy.base",
     "Bases/Projects copy.base",
     "Bases/People copy.base",
     "Bases/Notes copy.base",
-    "Bases/Meetings copy.base",
     "Projects/Company X - Internal Activities/Meetings/Weekly - 2025-02-03.md",
     "Agenda/2025-03-03.md",
     "Agenda/2025-03-02.md",
@@ -309,19 +322,11 @@
     "Agenda/2025-02-03.md",
     "Agenda/2025-03-05.md",
     "Agenda/2025-03-07.md",
-    "Templates/Daily Note.md",
-    "Templates/Company.md",
     "Media/excalidraw/Drawing 2025-03-02 15.58.36.excalidraw.md",
-    "Knowledge/People/John DOE.md",
-    "_attachments/QUICKSTART 2025-03-02 15.37.46.excalidraw.md",
     "_attachments/Pasted image 20250302153722.png",
     "_attachments/Pasted image 20250302153646.png",
-    "Projects/Obsidian - Template/Obsidian - Template.md",
-    "Knowledge/Concepts/Python.md",
-    "Projects/Obsidian - Template/Notes/_attachments/Obsidian - Presentation 2025-03-02 14.59.34.excalidraw.md",
     "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302150425.png",
     "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302151003.png",
-    "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302150514.png",
-    "Knowledge/Companies/Obsidian.md"
+    "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302150514.png"
   ]
 }

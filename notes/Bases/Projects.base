@@ -8,6 +8,7 @@ filters:
     - tags.contains("Type/Project/Project")
 formulas:
   Project Name: link(file.name, file.name.split(" - ")[1])
+  Untitled: ""
 properties:
   file.name:
     displayName: Project
@@ -25,11 +26,13 @@ views:
       - Team
       - Manager
     sort:
-      - column: formula.Project Name
+      - property: Stage
         direction: ASC
-      - column: file.name
+      - property: formula.Project Name
         direction: ASC
-      - column: note.Company
+      - property: file.name
+        direction: ASC
+      - property: Company
         direction: ASC
     columnSize:
       formula.Project Name: 235
@@ -53,7 +56,7 @@ views:
       - Team
       - Manager
     sort:
-      - column: note.Company
+      - property: Company
         direction: ASC
     columnSize:
       note.Team: 801
@@ -71,13 +74,24 @@ views:
       - Summary
       - Start Date
       - End Date
+      - Team
     sort:
-      - column: note.Client
+      - property: Summary
+        direction: DESC
+      - property: Team
         direction: ASC
-      - column: note.Company
+      - property: End Date
+        direction: ASC
+      - property: formula.Untitled
+        direction: DESC
+      - property: Client
+        direction: ASC
+      - property: Company
         direction: ASC
     columnSize:
-      note.Team: 801
+      note.Stage: 104
+      note.Summary: 371
+      note.Start Date: 146
   - type: table
     name: Active Projects
     filters:
@@ -94,11 +108,13 @@ views:
       - Team
       - Manager
     sort:
-      - column: formula.Project Name
+      - property: formula.Project Name
+        direction: DESC
+      - property: Start Date
+        direction: DESC
+      - property: file.name
         direction: ASC
-      - column: file.name
-        direction: ASC
-      - column: note.Company
+      - property: Company
         direction: ASC
     columnSize:
       formula.Project Name: 235
@@ -122,15 +138,15 @@ views:
       - Manager
       - Team
     sort:
-      - column: note.Stage
+      - property: Stage
         direction: DESC
-      - column: formula.Project Name
+      - property: formula.Project Name
         direction: DESC
-      - column: note.Manager
+      - property: Manager
         direction: ASC
-      - column: file.name
+      - property: file.name
         direction: ASC
-      - column: note.Company
+      - property: Company
         direction: ASC
     columnSize:
       formula.Project Name: 235
@@ -138,4 +154,63 @@ views:
       note.Start Date: 139
       note.End Date: 173
       note.Summary: 474
+      note.Team: 725
+  - type: table
+    name: Ongoing Projects
+    filters:
+      and:
+        - Stage == "Ongoing"
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Team
+      - Manager
+    sort:
+      - property: formula.Project Name
+        direction: DESC
+      - property: Start Date
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Stage: 153
+      note.Summary: 626
+      note.Team: 725
+  - type: table
+    name: 2025 Projects
+    filters:
+      or:
+        - Active == true
+        - note["End Date"] > ""
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Team
+      - Manager
+    sort:
+      - property: formula.Project Name
+        direction: DESC
+      - property: Start Date
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Stage: 153
+      note.Summary: 626
       note.Team: 725

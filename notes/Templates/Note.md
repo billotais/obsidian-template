@@ -4,6 +4,7 @@ const projectName = (await tp.system.suggester((item) => item, projectNames, tru
 %>---
 Project: '[[<% projectName %>]]'
 Topics:
+Summary:
 tags:
   - Type/Note/Topic
 Date: '[[<% tp.date.now("YYYY-MM-DD") %>]]'

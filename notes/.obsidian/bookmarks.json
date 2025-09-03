@@ -6,9 +6,9 @@
       "items": [
         {
           "type": "group",
-          "ctime": 1749215718619,
+          "ctime": 1756924077763,
           "items": [],
-          "title": "Bases"
+          "title": "_attachments"
         },
         {
           "type": "group",
@@ -31,30 +31,36 @@
         {
           "type": "group",
           "ctime": 1740925465975,
-          "items": [],
-          "title": "Media"
-        },
-        {
-          "type": "group",
-          "ctime": 1740925473531,
-          "items": [],
-          "title": "Agenda"
-        },
-        {
-          "type": "group",
-          "ctime": 1740925557253,
           "items": [
             {
               "type": "group",
-              "ctime": 1749215718619,
+              "ctime": 1740925473531,
               "items": [],
-              "title": "Bases"
+              "title": "Agenda"
+            },
+            {
+              "type": "group",
+              "ctime": 1740925557253,
+              "items": [],
+              "title": "Templates"
             }
           ],
-          "title": "Templates"
+          "title": "Media"
         }
       ],
       "title": "sortspec"
+    },
+    {
+      "type": "group",
+      "ctime": 1749215718619,
+      "items": [],
+      "title": "Bases"
+    },
+    {
+      "type": "group",
+      "ctime": 1756924077763,
+      "items": [],
+      "title": "_attachments"
     },
     {
       "type": "folder",
