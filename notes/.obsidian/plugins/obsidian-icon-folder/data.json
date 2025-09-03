@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiDatabase",
+      "LiFileSpreadsheet",
       "FarImage",
       "FasTrashCan",
-      "FasBook",
-      "FasLightbulb",
-      "FarCalendar"
+      "FasBook"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -39,5 +39,7 @@
   "Projects": "FasBook",
   "Archives": "FasTrashCan",
   "Media": "FarImage",
-  "Agenda": "FarCalendar"
+  "Agenda": "FarCalendar",
+  "Templates": "LiFileSpreadsheet",
+  "Bases": "LiDatabase"
 }

@@ -35,7 +35,7 @@ Date: '[[<% resultDate %>]]'
 Participants:
 Topics:
 tags:
-  - Type/Meeting
+  - Type/Meeting/Group
 Related:
 ---
 <% await tp.file.move("/Projects/" + projectName + "/Meetings/" + fileName) %>

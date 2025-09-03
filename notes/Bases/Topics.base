@@ -1,0 +1,38 @@
+filters:
+  and:
+    - tags.contains("Type/Topic")
+properties:
+  file.name:
+    displayName: Topic
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - Project
+      - Description
+      - Started
+      - Completed
+    sort:
+      - property: Project
+        direction: ASC
+    columnSize:
+      note.Description: 569
+  - type: table
+    name: Projects View
+    filters:
+      or:
+        - Project == this.file.name
+    order:
+      - file.name
+      - Description
+      - Started
+      - Completed
+    sort:
+      - property: Description
+        direction: ASC
+      - property: Topics
+        direction: ASC
+    columnSize:
+      file.name: 294
+      note.Description: 334

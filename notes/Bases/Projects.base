@@ -1,0 +1,234 @@
+filters:
+  or:
+    - tags.contains("Type/Project")
+    - tags.contains("Type/Project/PoC")
+    - tags.contains("Type/Project/Conference")
+    - tags.contains("Type/Project/Internship")
+    - tags.contains("Type/Project/Administration")
+    - tags.contains("Type/Project/Project")
+formulas:
+  Project Name: link(file.name, file.name.split(" - ")[1])
+  Untitled: ""
+properties:
+  file.name:
+    displayName: Project
+views:
+  - type: table
+    name: Table
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Team
+      - Manager
+    sort:
+      - property: Stage
+        direction: ASC
+      - property: formula.Project Name
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Stage: 184
+      note.Start Date: 149
+      note.End Date: 173
+      note.Summary: 438
+      note.Team: 725
+  - type: table
+    name: Client View
+    filters:
+      and:
+        - Client == this.file.name
+    order:
+      - formula.Project Name
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Team
+      - Manager
+    sort:
+      - property: Company
+        direction: ASC
+    columnSize:
+      note.Team: 801
+  - type: table
+    name: People View
+    filters:
+      or:
+        - Team.contains(this.file.name)
+        - Manager.contains(this.file.name)
+    order:
+      - Client
+      - formula.Project Name
+      - Active
+      - Stage
+      - Summary
+      - Start Date
+      - End Date
+      - Team
+    sort:
+      - property: Summary
+        direction: DESC
+      - property: Team
+        direction: ASC
+      - property: End Date
+        direction: ASC
+      - property: formula.Untitled
+        direction: DESC
+      - property: Client
+        direction: ASC
+      - property: Company
+        direction: ASC
+    columnSize:
+      note.Stage: 104
+      note.Summary: 371
+      note.Start Date: 146
+  - type: table
+    name: Active Projects
+    filters:
+      and:
+        - Active == true
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Team
+      - Manager
+    sort:
+      - property: formula.Project Name
+        direction: DESC
+      - property: Start Date
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Stage: 153
+      note.Summary: 626
+      note.Team: 725
+  - type: table
+    name: Active Client Projects
+    filters:
+      and:
+        - Active == true
+        - Client != link("ELCA")
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Manager
+      - Team
+    sort:
+      - property: Stage
+        direction: DESC
+      - property: formula.Project Name
+        direction: DESC
+      - property: Manager
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Stage: 153
+      note.Start Date: 139
+      note.End Date: 173
+      note.Summary: 474
+      note.Team: 725
+  - type: table
+    name: Ongoing Projects
+    filters:
+      and:
+        - Stage == "Ongoing"
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Team
+      - Manager
+    sort:
+      - property: formula.Project Name
+        direction: DESC
+      - property: Start Date
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Stage: 153
+      note.Summary: 626
+      note.Team: 725
+  - type: table
+    name: 2025 Projects
+    filters:
+      or:
+        - Active == true
+        - note["End Date"] > ""
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Team
+      - Manager
+    sort:
+      - property: formula.Project Name
+        direction: DESC
+      - property: Start Date
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Stage: 153
+      note.Summary: 626
+      note.Team: 725
+  - type: table
+    name: Concept View
+    filters:
+      and:
+        - file.links.contains(this.file)
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Summary
+    sort:
+      - property: Company
+        direction: ASC
+    columnSize:
+      note.Active: 95
+      note.Stage: 235
+      note.Summary: 278

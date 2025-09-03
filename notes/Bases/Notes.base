@@ -1,0 +1,101 @@
+filters:
+  or:
+    - tags.contains("Type/Note/Topic")
+formulas:
+  Note Name: link(file.name, file.name.split(" - ")[1])
+properties:
+  file.name:
+    displayName: Note
+views:
+  - type: table
+    name: Latest 100
+    order:
+      - Project
+      - formula.Note Name
+      - Date
+      - Summary
+    sort:
+      - property: Date
+        direction: ASC
+    limit: 100
+    columnSize:
+      note.Project: 282
+      formula.Note Name: 477
+      note.Date: 179
+      note.Summary: 478
+  - type: table
+    name: Projects View
+    filters:
+      or:
+        - Project == this.file.name
+    order:
+      - formula.Note Name
+      - Date
+      - Topics
+      - Summary
+    sort:
+      - property: Date
+        direction: DESC
+      - property: Summary
+        direction: ASC
+      - property: Project
+        direction: DESC
+    columnSize:
+      formula.Note Name: 210
+      note.Summary: 365
+  - type: table
+    name: Topics View
+    filters:
+      or:
+        - Topics.contains(this.file.name)
+    order:
+      - formula.Note Name
+      - Date
+      - Summary
+    sort:
+      - property: Date
+        direction: DESC
+      - property: Project
+        direction: DESC
+  - type: table
+    name: People View
+    filters:
+      or:
+        - file.hasLink(this.file.name)
+    order:
+      - Project
+      - formula.Note Name
+      - Date
+      - Summary
+    sort:
+      - property: Project
+        direction: ASC
+      - property: Date
+        direction: ASC
+  - type: table
+    name: Modified Today
+    filters:
+      and:
+        - file.mtime == this.date
+    order:
+      - Project
+      - formula.Note Name
+      - Date
+      - Summary
+    sort:
+      - property: Date
+        direction: ASC
+    columnSize:
+      note.Project: 343
+      formula.Note Name: 250
+      note.Summary: 359
+  - type: table
+    name: Concept View
+    filters:
+      and:
+        - file.links.contains(this.file)
+    order:
+      - file.name
+      - Project
+    columnSize:
+      file.name: 312

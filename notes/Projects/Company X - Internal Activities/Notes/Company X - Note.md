@@ -4,8 +4,9 @@ Date: "[[2025-02-03]]"
 Topics: "[[Important Topic]]"
 tags:
   - Type/Note/Topic
-Related: 
+Related:
 Archived: false
+Summary: Summary of note content
 ---
 
 > [!INFO] Readme

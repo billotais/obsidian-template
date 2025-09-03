@@ -1,0 +1,135 @@
+filters:
+  or:
+    - tags.contains("Type/Meeting/Interview")
+    - tags.contains("Type/Meeting/Catchup")
+    - tags.contains("Type/Meeting/Group")
+formulas:
+  simple_name: link(file.name, file.name.split(" - ")[0])
+properties:
+  file.name:
+    displayName: Meeting
+  formula.simple_name:
+    displayName: Meeting Name
+views:
+  - type: table
+    name: Latest 100
+    order:
+      - file
+      - Date
+      - Project
+      - Participants
+    sort:
+      - property: Date
+        direction: DESC
+    limit: 100
+    columnSize:
+      note.Date: 194
+      note.Participants: 834
+  - type: table
+    name: People View
+    filters:
+      or:
+        - Participants.contains(this.file.name)
+    order:
+      - Project
+      - formula.simple_name
+      - Date
+      - file
+    sort:
+      - property: Date
+        direction: DESC
+      - property: Project
+        direction: ASC
+    columnSize:
+      formula.simple_name: 264
+  - type: table
+    name: Projects View
+    filters:
+      or:
+        - Project == this.file.name
+    order:
+      - file
+      - formula.simple_name
+      - Date
+      - Participants
+    sort:
+      - property: Date
+        direction: DESC
+      - property: Participants
+        direction: ASC
+      - property: Project
+        direction: ASC
+    columnSize:
+      note.Participants: 792
+  - type: table
+    name: Topics View
+    filters:
+      or:
+        - Topics.contains(this.file.name)
+    order:
+      - formula.simple_name
+      - Date
+      - Participants
+    sort:
+      - property: Date
+        direction: ASC
+      - property: Participants
+        direction: ASC
+      - property: Project
+        direction: ASC
+    columnSize:
+      note.Participants: 1009
+  - type: table
+    name: Daily View
+    filters:
+      and:
+        - Date == this.Date
+    order:
+      - file
+      - Project
+      - Participants
+    sort:
+      - property: file
+        direction: ASC
+      - property: Project
+        direction: DESC
+      - property: formula.simple_name
+        direction: DESC
+    columnSize:
+      file.file: 336
+      note.Project: 255
+      note.Participants: 646
+  - type: table
+    name: Topic View
+    filters:
+      and:
+        - file.links.contains(this.file)
+    order:
+      - file
+      - Date
+      - Project
+      - Participants
+    sort:
+      - property: Date
+        direction: DESC
+    limit: 100
+    columnSize:
+      note.Date: 194
+      note.Participants: 834
+  - type: table
+    name: Concept View
+    filters:
+      and:
+        - file.links.contains(this.file)
+    order:
+      - file
+      - Date
+      - Project
+      - Participants
+    sort:
+      - property: Date
+        direction: DESC
+    limit: 100
+    columnSize:
+      note.Date: 194
+      note.Participants: 834

@@ -12,22 +12,11 @@ Related:
 
 
 # Projects
-```dataview
-LIST FROM #Type/Project 
-WHERE contains(file.outlinks, this.file.link)
-```
+![[Projects.base#Concept View]]
 # Notes
-```dataview
-TABLE Project FROM #Type/Note/Topic
-WHERE contains(file.outlinks, this.file.link)
-SORT Date DESC
-```
+![[Notes.base#Concept View]]
 # Meetings
-```dataview
-TABLE Project FROM #Type/Meeting
-WHERE contains(file.outlinks, this.file.link)
-SORT Date DESC
-```
+![[Meetings.base#Concept View]]
 # Documentation
 
 *[[Python]] is a concept.*

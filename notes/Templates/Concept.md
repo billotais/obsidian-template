@@ -2,25 +2,14 @@
 Provider: 
 tags: Type/Concept
 aliases: 
-Related:
+Related: 
 ---
 # Projects
-```dataview
-LIST FROM #Type/Project 
-WHERE contains(file.outlinks, this.file.link)
-```
+![[Projects.base#Concept View]]
 # Notes
-```dataview
-TABLE Project FROM #Type/Note/Topic
-WHERE contains(file.outlinks, this.file.link)
-SORT Date DESC
-```
+![[Notes.base#Concept View]]
 # Meetings
-```dataview
-TABLE Project FROM #Type/Meeting
-WHERE contains(file.outlinks, this.file.link)
-SORT Date DESC
-```
+![[Meetings.base#Concept View]]
 # Documentation
 
 <% await tp.file.move("/Knowledge/Concepts/" + tp.file.title) %>

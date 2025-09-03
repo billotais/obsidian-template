@@ -1,25 +1,23 @@
 {
   "main": {
-    "id": "1d70d552d08b7de0",
+    "id": "2be532859ca85b28",
     "type": "split",
     "children": [
       {
-        "id": "9615d90ec378c4c5",
+        "id": "460b43000c5fb279",
         "type": "tabs",
         "children": [
           {
-            "id": "0956c7dc57f0b884",
+            "id": "776c37251cf9077d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "QUICKSTART.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "Bases/Topics.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "QUICKSTART"
+              "icon": "lucide-table",
+              "title": "Topics"
             }
           }
         ]
@@ -28,15 +26,16 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "8f27b82f628a6e1c",
+    "id": "25843fb4ce7fe960",
     "type": "split",
     "children": [
       {
-        "id": "534ef20a9b6ef6ca",
+        "id": "4bc47b5e1cddef63",
         "type": "tabs",
+        "dimension": 44.80471628592483,
         "children": [
           {
-            "id": "cda5a8ed4b39578e",
+            "id": "1bb47b0c2939b690",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -49,7 +48,7 @@
             }
           },
           {
-            "id": "ec5d564a3f038376",
+            "id": "2fdc3f040c7bb203",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,15 +64,15 @@
               "title": "Search"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
-        "id": "ee3fb4876d78ed67",
+        "id": "7d62f8df4e4d6f25",
         "type": "tabs",
+        "dimension": 26.897568165070005,
         "children": [
           {
-            "id": "f7740f07a47036c2",
+            "id": "9936f86a196e1fc1",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -85,11 +84,12 @@
         ]
       },
       {
-        "id": "a89deda9372b7af7",
+        "id": "ea33e89a3dcce573",
         "type": "tabs",
+        "dimension": 28.297715549005158,
         "children": [
           {
-            "id": "e5919df58d718c1e",
+            "id": "0d589dc452d3d5e6",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -107,18 +107,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 346.5
   },
   "right": {
-    "id": "1745ed784534533c",
+    "id": "40cacfb6c81b79df",
     "type": "split",
     "children": [
       {
-        "id": "c9210ae7fd23b69d",
+        "id": "15f5f1b2379ffa3f",
         "type": "tabs",
+        "dimension": 48.642857142857146,
         "children": [
           {
-            "id": "cb23b2f8f6287001",
+            "id": "a6815f66100b9fa2",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -128,12 +129,12 @@
             }
           },
           {
-            "id": "bf10163997c47e9a",
+            "id": "f3c61108553ac181",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "QUICKSTART.md",
+                "file": "Projects/Company X - Internal Activities/Notes/Company X - Note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,25 +144,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for QUICKSTART"
+              "title": "Backlinks for Company X - Note"
             }
           },
           {
-            "id": "2534c535b0ff246a",
+            "id": "4ea51bf8d5ba3d50",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Agenda/2025-03-03.md",
+                "file": "Projects/Company X - Internal Activities/Notes/Company X - Note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2025-03-03"
+              "title": "Outgoing links from Company X - Note"
             }
           },
           {
-            "id": "37925a8c6b318c19",
+            "id": "b451e13144a25942",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -173,36 +174,85 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
-          }
-        ]
-      },
-      {
-        "id": "64eb3863d08f4930",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "a2fdddd572eaa5bc",
+            "id": "227a3a1b56f8ad7a",
             "type": "leaf",
             "state": {
-              "type": "outline",
-              "state": {
-                "file": "QUICKSTART.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of QUICKSTART"
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           }
         ]
       },
       {
-        "id": "33081778cc2501d8",
+        "id": "74688fb76132891a",
         "type": "tabs",
+        "dimension": 22.78571428571429,
         "children": [
           {
-            "id": "b42fa787181e5156",
+            "id": "05b11e974f83e072",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Bases/Topics.base",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Topics"
+            }
+          },
+          {
+            "id": "e1d18a498fece155",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Projects/Company X - Internal Activities/Notes/Company X - Note.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.1975308641975308,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of Company X - Note"
+            }
+          }
+        ]
+      },
+      {
+        "id": "08a7aab154dc0e42",
+        "type": "tabs",
+        "dimension": 28.57142857142857,
+        "children": [
+          {
+            "id": "bb9da6f42fdb169d",
             "type": "leaf",
             "state": {
               "type": "recent-files",
@@ -219,8 +269,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "custom-sort:Toggle custom sorting": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -229,11 +278,52 @@
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
       "templater-obsidian:Templater": false,
+      "custom-sort:Toggle custom sorting": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "cb23b2f8f6287001",
+  "active": "776c37251cf9077d",
   "lastOpenFiles": [
-    "Agenda/2025-03-03.md"
+    "Bases/Projects.base",
+    "Bases/People.base",
+    "Bases/Notes.base",
+    "Bases/Meetings.base",
+    "Knowledge/People/John DOE.md",
+    "Knowledge/Concepts/Python.md",
+    "Knowledge/Companies/Obsidian.md",
+    "Knowledge/Companies/Company X.md",
+    "Projects/Company X - Internal Activities/Company X - Internal Activities.md",
+    "Agenda/2025-09-03.md",
+    "Bases/Topics.base",
+    "Bases/Companies.base",
+    "Templates/Topic.md",
+    "Templates/Project.md",
+    "Templates/Person.md",
+    "Templates/Note.md",
+    "Templates/Meeting.md",
+    "Templates/Daily Note.md",
+    "Templates/Concept.md",
+    "Templates/Company.md",
+    "Agenda/2025-08-14.md",
+    "Agenda/2025-06-28.md",
+    "Agenda/2025-06-21.md",
+    "Projects/Company X - Internal Activities/Topics/Important Topic.md",
+    "Bases/Topics copy.base",
+    "Bases/Projects copy.base",
+    "Bases/People copy.base",
+    "Bases/Notes copy.base",
+    "Projects/Company X - Internal Activities/Meetings/Weekly - 2025-02-03.md",
+    "Agenda/2025-03-03.md",
+    "Agenda/2025-03-02.md",
+    "Agenda/2025-02-15.md",
+    "Agenda/2025-06-06.md",
+    "Agenda/2025-03-17.md",
+    "QUICKSTART.md",
+    "_attachments/Pasted image 20250302153722.png",
+    "_attachments/Pasted image 20250302153646.png",
+    "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302150425.png",
+    "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302151003.png",
+    "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302150514.png"
   ]
 }

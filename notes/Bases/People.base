@@ -1,0 +1,85 @@
+filters:
+  and:
+    - tags.contains("Type/Person")
+properties:
+  file.name:
+    displayName: Person
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - Division
+      - Company
+      - Role
+      - Departed
+    sort:
+      - property: Company
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: Role
+        direction: ASC
+    columnSize:
+      note.Division: 115
+      note.Role: 395
+  - type: table
+    name: Company View
+    filters:
+      and:
+        - Company == this.file.name
+    order:
+      - file.name
+      - Division
+      - Departed
+      - Role
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: Departed
+        direction: ASC
+    columnSize:
+      file.name: 182
+      note.Role: 371
+  - type: table
+    name: ELCA
+    filters:
+      and:
+        - Company == "ELCA"
+    order:
+      - file.name
+      - Company
+      - Division
+      - Role
+      - Departed
+    sort:
+      - property: Company
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: Role
+        direction: ASC
+    columnSize:
+      note.Team: 132
+      note.Role: 395
+  - type: table
+    name: Clients
+    filters:
+      and:
+        - Company != link("ELCA")
+    order:
+      - file.name
+      - Company
+      - Division
+      - Role
+      - Departed
+    sort:
+      - property: Company
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: Role
+        direction: ASC
+    columnSize:
+      note.Team: 132
+      note.Role: 395

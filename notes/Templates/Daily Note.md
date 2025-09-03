@@ -14,27 +14,11 @@ cssclasses:
 
 
 > [!example] Meetings of the day
-> ```dataview
-> TABLE Project, Participants 
-> FROM #Type/Meeting 
-> WHERE Date = this.Date
-> ```
+> ![[Meetings.base#Daily View]]
 
-> [!multi-column]
->
->> [!summary] Notes - Created Today
->> ```dataview
->> TABLE Project
->> FROM #Type/Note/Topic  
->> WHERE Date = this.Date
->> ```
->
->> [!note] Notes - Modified Today
->> ```dataview
->> TABLE Project
->> FROM #Type/Note/Topic  
->> WHERE date(file.mday) = date(this.file.name) AND Date != this.Date
->> ```
+
+> [!note] Notes - Modified Today
+> ![[Notes.base#Modified Today]]
 
 ## Tasks
 
@@ -44,6 +28,7 @@ cssclasses:
 >> ```dataview
 >> TASK
 >> WHERE (due) AND !completed AND (due < date(this.file.name))
+>> AND !contains(file.path, "Archives")
 >> GROUP BY header
 >> ```
 > 
@@ -51,6 +36,7 @@ cssclasses:
 >> ```dataview
 >> TASK
 >> WHERE (due) AND !completed AND (due = date(this.file.name) )
+>> AND !contains(file.path, "Archives")
 >> GROUP BY header
 >> ```
 >
@@ -62,6 +48,7 @@ cssclasses:
 >> TASK
 >> WHERE (due) AND !completed AND due > date(this.file.name) AND (due <= date(this.file.name) + dur(7 day))
 >> GROUP BY join(list(due, header), " - ")
+>> AND !contains(file.path, "Archives")
 >> SORT due ASC
 >> ```
 >
@@ -69,6 +56,7 @@ cssclasses:
 >> ```dataview
 >> TASK
 >> WHERE completion != null AND completion = date(this.file.name)
+>> AND !contains(file.path, "Archives")
 >> GROUP BY header
 >> ```
 
@@ -77,6 +65,7 @@ cssclasses:
 > TASK 
 > WHERE !contains(file.tags, "#Type/Note/Daily")
 > AND !due AND !completed
+> AND !contains(file.path, "Archives")
 > GROUP BY header
 > ```
 > 

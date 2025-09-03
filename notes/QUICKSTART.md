@@ -206,7 +206,7 @@ The template comes with a few plugins that I find essential for my workflow. Not
 - **Advanced Tables**: For easier usage of markdown tables
 - **Calendar**: For easy access to the daily notes
 - **Custom File Explorer Sorting**: To keep the folders in the correct order
-- **Dataview**: For all queries in the various overview pages
+- **Dataview**: For some queries in the various overview pages. Most queries are using Bases.
 - **Escalidraw**: My prefered drawing tool for obsidian. I use the ctrl+alt+D to create an embedded a new drawing in the current note.
 - **Folder Note**: To automatically create open the main folder note when opening a folder
 - **Iconize**: To add icons to the folders

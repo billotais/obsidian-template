@@ -2,9 +2,9 @@
 const projectNames = [... new Set(app.vault.getMarkdownFiles().map(f => f.path).filter(path => path.startsWith("Projects")).map(path => path.split("/")[1].split(".")[0]))];
 const projectName = (await tp.system.suggester((item) => item, projectNames, true, "Select Project Name")); 
 const fileTitle = await tp.system.prompt("Task Name", ""); 
-const fileName = fileTitle
+const fileName = projectName.split(" - ")[0] + " - " + fileTitle
 %>---
-Name: '[[<% fileTitle %>]]'
+Name: '[[<% fileName %>]]'
 Project: '[[<% projectName %>]]'
 Started: false
 Completed: false
@@ -13,20 +13,13 @@ tags:
   - Type/Topic
 ---
 
+
 > [!quote] Meetings
-> ```dataview
-> TABLE Participants FROM #Type/Meeting
-> WHERE  contains(file.outlinks, this.file.link)
-> SORT Date Desc
-> ```
+> ![[Meetings.base#Topics View]]
 
 > [!NOTE] Notes
-> ```dataview
-> TABLE Date FROM #Type/Note/Topic 
-> WHERE  contains(file.outlinks, this.file.link)
-> Sort Date DESC
-> ```
-> 
+> ![[Notes.base#Topics View]]
+
 
 ------------------------------
 
