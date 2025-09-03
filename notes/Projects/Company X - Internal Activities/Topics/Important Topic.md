@@ -1,9 +1,9 @@
 ---
 Name: "[[Important Topic]]"
 Project: "[[Company X - Internal Activities]]"
-Started: false
+Started: true
 Completed: false
-Description: 
+Description: Description of the topic
 tags:
   - Type/Topic
 ---

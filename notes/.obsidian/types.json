@@ -3,7 +3,7 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "Date": "text",
+    "Date": "date",
     "Status": "checkbox",
     "Team": "multitext",
     "Manager": "multitext",

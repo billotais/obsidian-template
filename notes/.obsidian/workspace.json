@@ -11,15 +11,13 @@
             "id": "776c37251cf9077d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "Knowledge/People/John DOE.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "Bases/Topics.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "John DOE"
+              "icon": "lucide-table",
+              "title": "Topics"
             }
           }
         ]
@@ -200,13 +198,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Knowledge/People/John DOE.md",
+                "file": "Bases/Topics.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of John DOE"
+              "title": "Outline of Topics"
             }
           },
           {
@@ -287,10 +285,18 @@
   },
   "active": "776c37251cf9077d",
   "lastOpenFiles": [
+    "Bases/Projects.base",
+    "Bases/People.base",
+    "Bases/Notes.base",
+    "Bases/Meetings.base",
+    "Knowledge/People/John DOE.md",
     "Knowledge/Concepts/Python.md",
-    "Knowledge/Companies/Company X.md",
     "Knowledge/Companies/Obsidian.md",
+    "Knowledge/Companies/Company X.md",
     "Projects/Company X - Internal Activities/Company X - Internal Activities.md",
+    "Agenda/2025-09-03.md",
+    "Bases/Topics.base",
+    "Bases/Companies.base",
     "Templates/Topic.md",
     "Templates/Project.md",
     "Templates/Person.md",
@@ -299,13 +305,6 @@
     "Templates/Daily Note.md",
     "Templates/Concept.md",
     "Templates/Company.md",
-    "Agenda/2025-09-03.md",
-    "Bases/Meetings.base",
-    "Bases/Companies.base",
-    "Bases/Topics.base",
-    "Bases/Projects.base",
-    "Bases/People.base",
-    "Bases/Notes.base",
     "Agenda/2025-08-14.md",
     "Agenda/2025-06-28.md",
     "Agenda/2025-06-21.md",
@@ -321,8 +320,6 @@
     "Agenda/2025-06-06.md",
     "Agenda/2025-03-17.md",
     "QUICKSTART.md",
-    "Projects/Company X - Internal Activities/Notes/Company X - Note.md",
-    "Agenda/2025-02-03.md",
     "_attachments/Pasted image 20250302153722.png",
     "_attachments/Pasted image 20250302153646.png",
     "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302150425.png",

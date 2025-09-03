@@ -21,7 +21,7 @@ views:
       - property: Role
         direction: ASC
     columnSize:
-      note.Team: 132
+      note.Division: 115
       note.Role: 395
   - type: table
     name: Company View

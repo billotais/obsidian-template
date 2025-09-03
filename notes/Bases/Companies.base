@@ -1,9 +1,0 @@
-filters:
-  and:
-    - tags.contains("Type/Company")
-properties:
-  file.name:
-    displayName: Company
-views:
-  - type: table
-    name: Table
