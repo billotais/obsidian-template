@@ -167,7 +167,7 @@ views:
     name: Ongoing Projects
     filters:
       and:
-        - Stage == "40. Ongoing"
+        - Stage == "Ongoing"
     order:
       - formula.Project Name
       - Client
