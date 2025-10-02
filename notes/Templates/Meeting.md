@@ -28,14 +28,15 @@ else {
     resultDate = selection; 
 }
 resultDate = resultDate.format(dateFormat)
-const fileName = fileTitle + " - " + resultDate
+const fileName = projectName.split(" - ")[0] + " - " + fileTitle + " - " + resultDate
 %>---
 Project: '[[<% projectName %>]]'
 Date: '[[<% resultDate %>]]'
+Meeting Name: '<% fileTitle %>'
 Participants:
 Topics:
 tags:
-  - Type/Meeting/Group
+  - Type/Meeting/<% fileTitle.contains("Weekly") ? "Weekly" : fileTitle.contains("Monthly") ? "Monthly" : "Group" %>
 Related:
 ---
 <% await tp.file.move("/Projects/" + projectName + "/Meetings/" + fileName) %>

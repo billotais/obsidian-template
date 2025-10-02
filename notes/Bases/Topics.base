@@ -1,6 +1,6 @@
 filters:
   and:
-    - tags.contains("Type/Topic")
+    - file.tags.contains("Type/Topic")
 properties:
   file.name:
     displayName: Topic
@@ -34,5 +34,5 @@ views:
       - property: Topics
         direction: ASC
     columnSize:
-      file.name: 294
+      file.name: 302
       note.Description: 334

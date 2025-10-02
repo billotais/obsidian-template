@@ -1,6 +1,6 @@
 filters:
   or:
-    - tags.contains("Type/Note/Topic")
+    - file.tags.contains("Type/Note/Topic")
 formulas:
   Note Name: link(file.name, file.name.split(" - ")[1])
 properties:
@@ -9,6 +9,9 @@ properties:
 views:
   - type: table
     name: Latest 100
+    groupBy:
+      property: Project
+      direction: ASC
     order:
       - Project
       - formula.Note Name
@@ -28,10 +31,12 @@ views:
     filters:
       or:
         - Project == this.file.name
+    groupBy:
+      property: Topics
+      direction: ASC
     order:
       - formula.Note Name
       - Date
-      - Topics
       - Summary
     sort:
       - property: Date
@@ -41,7 +46,8 @@ views:
       - property: Project
         direction: DESC
     columnSize:
-      formula.Note Name: 210
+      formula.Note Name: 311
+      note.Date: 234
       note.Summary: 365
   - type: table
     name: Topics View
@@ -77,8 +83,10 @@ views:
     filters:
       and:
         - file.mtime == this.date
+    groupBy:
+      property: Project
+      direction: ASC
     order:
-      - Project
       - formula.Note Name
       - Date
       - Summary
@@ -88,6 +96,7 @@ views:
     columnSize:
       note.Project: 343
       formula.Note Name: 250
+      note.Date: 240
       note.Summary: 359
   - type: table
     name: Concept View

@@ -1,14 +1,16 @@
 ---
 Project: "[[Company X - Internal Activities]]"
-Date: "[[2025-02-03]]"
+Date: "[[2025-10-02]]"
+Meeting Name: Weekly
 Participants: "[[John DOE]]"
 Topics: "[[Important Topic]]"
 tags:
-  - Type/Meeting/Group
-  - meet
+  - Type/Meeting/Weekly
 Related:
   - "[[Python]]"
 ---
+
+
 
 > [!INFO] Readme
 > A #Type/Meeting  can be created to prepare and document a meeting/call with other people

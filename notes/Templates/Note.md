@@ -4,6 +4,7 @@ const projectName = (await tp.system.suggester((item) => item, projectNames, tru
 %>---
 Project: '[[<% projectName %>]]'
 Topics:
+Note Name: '<% fileName %>'
 Summary:
 tags:
   - Type/Note/Topic

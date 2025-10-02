@@ -1,11 +1,10 @@
+summaries:
+  Count: values.unique().length
+  Unique: values.unique().length
+  new summary: ""
 filters:
   or:
-    - tags.contains("Type/Project")
-    - tags.contains("Type/Project/PoC")
-    - tags.contains("Type/Project/Conference")
-    - tags.contains("Type/Project/Internship")
-    - tags.contains("Type/Project/Administration")
-    - tags.contains("Type/Project/Project")
+    - file.tags.contains("Type/Project")
 formulas:
   Project Name: link(file.name, file.name.split(" - ")[1])
   Untitled: ""
@@ -15,9 +14,12 @@ properties:
 views:
   - type: table
     name: Table
+    groupBy:
+      property: Stage
+      direction: ASC
     order:
-      - formula.Project Name
       - Client
+      - formula.Project Name
       - Active
       - Stage
       - Start Date
@@ -25,27 +27,28 @@ views:
       - Summary
       - Team
       - Manager
+      - Client Partner
     sort:
-      - property: Stage
+      - property: Client
         direction: ASC
       - property: formula.Project Name
         direction: ASC
-      - property: file.name
-        direction: ASC
-      - property: Company
-        direction: ASC
+    summaries: {}
     columnSize:
       formula.Project Name: 235
       note.Stage: 184
       note.Start Date: 149
       note.End Date: 173
       note.Summary: 438
-      note.Team: 725
+      note.Team: 479
   - type: table
     name: Client View
     filters:
       and:
         - Client == this.file.name
+    groupBy:
+      property: Stage
+      direction: ASC
     order:
       - formula.Project Name
       - Active
@@ -59,6 +62,7 @@ views:
       - property: Company
         direction: ASC
     columnSize:
+      note.Stage: 115
       note.Team: 801
   - type: table
     name: People View
@@ -66,6 +70,9 @@ views:
       or:
         - Team.contains(this.file.name)
         - Manager.contains(this.file.name)
+    groupBy:
+      property: Stage
+      direction: ASC
     order:
       - Client
       - formula.Project Name
@@ -89,7 +96,8 @@ views:
       - property: Company
         direction: ASC
     columnSize:
-      note.Stage: 104
+      formula.Project Name: 195
+      note.Stage: 171
       note.Summary: 371
       note.Start Date: 146
   - type: table
@@ -159,7 +167,7 @@ views:
     name: Ongoing Projects
     filters:
       and:
-        - Stage == "Ongoing"
+        - Stage == "40. Ongoing"
     order:
       - formula.Project Name
       - Client
@@ -189,7 +197,10 @@ views:
     filters:
       or:
         - Active == true
-        - note["End Date"] > ""
+        - note["End Date"] > "2025-01-01"
+    groupBy:
+      property: Stage
+      direction: ASC
     order:
       - formula.Project Name
       - Client
