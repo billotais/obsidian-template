@@ -1,12 +1,15 @@
 filters:
   and:
-    - tags.contains("Type/Person")
+    - file.tags.contains("Type/Person")
 properties:
   file.name:
     displayName: Person
 views:
   - type: table
     name: Table
+    groupBy:
+      property: Company
+      direction: ASC
     order:
       - file.name
       - Division
@@ -21,13 +24,16 @@ views:
       - property: Role
         direction: ASC
     columnSize:
-      note.Division: 115
+      file.name: 238
       note.Role: 395
   - type: table
     name: Company View
     filters:
       and:
         - Company == this.file.name
+    groupBy:
+      property: Division
+      direction: ASC
     order:
       - file.name
       - Division

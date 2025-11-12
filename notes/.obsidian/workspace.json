@@ -4,20 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "460b43000c5fb279",
+        "id": "7b45cf17affe1b94",
         "type": "tabs",
         "children": [
           {
-            "id": "776c37251cf9077d",
+            "id": "b9466f9bd2f9eab4",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Bases/Topics.base",
-                "viewName": "Table"
+                "file": "QUICKSTART.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-table",
-              "title": "Topics"
+              "icon": "lucide-file",
+              "title": "QUICKSTART"
             }
           }
         ]
@@ -198,13 +200,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bases/Topics.base",
+                "file": "QUICKSTART.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Topics"
+              "title": "Outline of QUICKSTART"
             }
           },
           {
@@ -283,43 +285,44 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "776c37251cf9077d",
+  "active": "b9466f9bd2f9eab4",
   "lastOpenFiles": [
-    "Bases/Projects.base",
-    "Bases/People.base",
-    "Bases/Notes.base",
-    "Bases/Meetings.base",
-    "Knowledge/People/John DOE.md",
-    "Knowledge/Concepts/Python.md",
-    "Knowledge/Companies/Obsidian.md",
-    "Knowledge/Companies/Company X.md",
-    "Projects/Company X - Internal Activities/Company X - Internal Activities.md",
-    "Agenda/2025-09-03.md",
-    "Bases/Topics.base",
-    "Bases/Companies.base",
-    "Templates/Topic.md",
     "Templates/Project.md",
-    "Templates/Person.md",
-    "Templates/Note.md",
+    "Knowledge/Companies/Company X.md",
+    "Knowledge/Companies/Obsidian.md",
+    "Projects/Company X - Internal Activities/Notes/Company X - Note.md",
+    "Untitled.md",
+    "Projects/Company X - Internal Activities/Meetings/Company X - Weekly - 2025-10-02.md",
+    "Projects/Company X - Internal Activities/Meetings/Weekly - 2025-02-03.md",
+    "Projects/Company X - Internal Activities/Company X - Internal Activities.md",
     "Templates/Meeting.md",
     "Templates/Daily Note.md",
+    "Knowledge/People/John DOE.md",
+    "Templates/Person.md",
+    "Bases/Projects.base",
+    "Templates/Topic.md",
+    "Templates/Task.md",
     "Templates/Concept.md",
     "Templates/Company.md",
+    "Bases/Tasks.base",
+    "Bases/Related.base",
+    "Bases/Meetings.base",
+    "Bases/Topics.base",
+    "Bases/People.base",
+    "Bases/Notes.base",
+    "Bases",
+    "Agenda/2025-09-03.md",
+    "Agenda/2025-06-06.md",
+    "Agenda/2025-03-17.md",
+    "Agenda/2025-10-02.md",
+    "Knowledge/Concepts/Python.md",
+    "Bases/Companies.base",
+    "Templates/Note.md",
     "Agenda/2025-08-14.md",
     "Agenda/2025-06-28.md",
     "Agenda/2025-06-21.md",
     "Projects/Company X - Internal Activities/Topics/Important Topic.md",
     "Bases/Topics copy.base",
-    "Bases/Projects copy.base",
-    "Bases/People copy.base",
-    "Bases/Notes copy.base",
-    "Projects/Company X - Internal Activities/Meetings/Weekly - 2025-02-03.md",
-    "Agenda/2025-03-03.md",
-    "Agenda/2025-03-02.md",
-    "Agenda/2025-02-15.md",
-    "Agenda/2025-06-06.md",
-    "Agenda/2025-03-17.md",
-    "QUICKSTART.md",
     "_attachments/Pasted image 20250302153722.png",
     "_attachments/Pasted image 20250302153646.png",
     "Projects/Obsidian - Template/Notes/_attachments/Pasted image 20250302150425.png",

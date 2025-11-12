@@ -12,7 +12,6 @@ cssclasses:
 
 ## Summary
 
-
 > [!example] Meetings of the day
 > ![[Meetings.base#Daily View]]
 
@@ -21,6 +20,7 @@ cssclasses:
 > ![[Notes.base#Modified Today]]
 
 ## Tasks
+
 
 > [!multi-column]
 >
@@ -47,8 +47,8 @@ cssclasses:
 >> ```dataview
 >> TASK
 >> WHERE (due) AND !completed AND due > date(this.file.name) AND (due <= date(this.file.name) + dur(7 day))
->> GROUP BY join(list(due, header), " - ")
 >> AND !contains(file.path, "Archives")
+>> GROUP BY join(list(due, header), " - ")
 >> SORT due ASC
 >> ```
 >
