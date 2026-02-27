@@ -18,6 +18,7 @@ views:
       - formula.simple_name
       - Date
       - Project
+      - Topics
       - Participants
     sort:
       - property: Date
@@ -26,6 +27,7 @@ views:
     columnSize:
       formula.simple_name: 331
       note.Date: 217
+      note.Topics: 312
       note.Participants: 834
   - type: table
     name: People View
@@ -45,7 +47,8 @@ views:
       - property: Project
         direction: ASC
     columnSize:
-      formula.simple_name: 187
+      formula.simple_name: 285
+      note.Date: 193
   - type: table
     name: Projects View
     filters:
@@ -57,16 +60,16 @@ views:
     order:
       - formula.simple_name
       - Date
-      - Participants
     sort:
+      - property: formula.simple_name
+        direction: ASC
       - property: Date
         direction: DESC
       - property: Meeting Name
         direction: ASC
     columnSize:
-      formula.simple_name: 382
-      note.Date: 152
-      note.Participants: 515
+      formula.simple_name: 277
+      note.Date: 185
   - type: table
     name: Topics View
     filters:
@@ -80,6 +83,8 @@ views:
       - property: Date
         direction: ASC
     columnSize:
+      formula.simple_name: 360
+      note.Date: 156
       note.Participants: 1009
   - type: table
     name: Daily View
@@ -133,5 +138,6 @@ views:
         direction: DESC
     limit: 100
     columnSize:
+      file.file: 260
       note.Date: 194
       note.Participants: 834

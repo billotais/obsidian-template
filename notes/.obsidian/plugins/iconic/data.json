@@ -1,0 +1,445 @@
+{
+  "biggerIcons": "mobile",
+  "clickableIcons": "desktop",
+  "showAllFileIcons": false,
+  "showAllFolderIcons": false,
+  "minimalFolderIcons": true,
+  "showMarkdownTabIcons": true,
+  "showTitleIcons": true,
+  "showTagPillIcons": true,
+  "showMenuActions": true,
+  "showSuggestionIcons": true,
+  "showQuickSwitcherIcons": true,
+  "showMoveFileIcons": true,
+  "showItemName": "desktop",
+  "biggerSearchResults": "mobile",
+  "maxSearchResults": 50,
+  "colorPicker1": "list",
+  "colorPicker2": "rgb",
+  "uncolorHover": false,
+  "uncolorDrag": false,
+  "uncolorSelect": false,
+  "uncolorQuick": false,
+  "rememberDeletedItems": false,
+  "maxBackups": 5,
+  "dialogState": {
+    "iconMode": true,
+    "emojiMode": false,
+    "rulePage": "folder"
+  },
+  "appIcons": {},
+  "tabIcons": {},
+  "fileIcons": {
+    "Agenda": {
+      "icon": "lucide-calendar-days",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Archives": {
+      "icon": "lucide-archive-x",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Bases": {
+      "icon": "lucide-database",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Bases/Companies.base": {
+      "icon": "lucide-building-2",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Bases/Meetings.base": {
+      "icon": "lucide-messages-square",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Bases/Notes.base": {
+      "icon": "lucide-notebook",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Bases/People.base": {
+      "icon": "lucide-person-standing",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Bases/Projects.base": {
+      "icon": "lucide-book-text",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Bases/Tasks.base": {
+      "icon": "lucide-list-todo",
+      "unsynced": [
+        "96f197d3e90094e1",
+        "ea45cbd8b99a3dd7",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Bases/Topics.base": {
+      "icon": "lucide-bookmark",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Clippings": {
+      "icon": "lucide-clipboard-pen",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Knowledge": {
+      "icon": "lucide-library-big",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Knowledge/Companies": {
+      "icon": "lucide-building-2",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Knowledge/Concepts": {
+      "icon": "lucide-lightbulb",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Knowledge/People": {
+      "icon": "lucide-person-standing",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Media": {
+      "icon": "lucide-images",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Projects": {
+      "color": "gray",
+      "icon": "lucide-book-text",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    },
+    "Templates": {
+      "icon": "lucide-file-spreadsheet",
+      "unsynced": [
+        "ea45cbd8b99a3dd7",
+        "96f197d3e90094e1",
+        "107b4303dbb255ad"
+      ]
+    }
+  },
+  "bookmarkIcons": {},
+  "tagIcons": {},
+  "propertyIcons": {
+    "Active": {
+      "color": "purple"
+    },
+    "Address": {
+      "icon": "lucide-map-pinned",
+      "color": "cyan"
+    },
+    "Client Partner": {
+      "icon": "lucide-handshake",
+      "color": "red"
+    },
+    "Client Team": {
+      "icon": "lucide-person-standing",
+      "color": "cyan"
+    },
+    "Client": {
+      "icon": "lucide-building-2",
+      "color": "cyan"
+    },
+    "Company Relation": {
+      "icon": "lucide-handshake",
+      "color": "red"
+    },
+    "Company": {
+      "icon": "lucide-building-2",
+      "color": "cyan"
+    },
+    "Completed": {
+      "color": "purple"
+    },
+    "Date": {
+      "color": "purple"
+    },
+    "Departed": {
+      "icon": "lucide-fast-forward",
+      "color": "gray"
+    },
+    "Description": {
+      "icon": "lucide-text-select",
+      "color": "orange"
+    },
+    "Division": {
+      "icon": "lucide-group",
+      "color": "cyan"
+    },
+    "End Date": {
+      "color": "purple"
+    },
+    "First Name": {
+      "icon": "lucide-subtitles",
+      "color": "orange"
+    },
+    "Hierarchy": {
+      "icon": "lucide-replace",
+      "color": "purple"
+    },
+    "Industries": {
+      "icon": "lucide-factory",
+      "color": "cyan"
+    },
+    "Last Name": {
+      "icon": "lucide-subtitles",
+      "color": "red"
+    },
+    "Logo": {
+      "icon": "lucide-image",
+      "color": "orange"
+    },
+    "Manager": {
+      "icon": "lucide-person-standing",
+      "color": "green"
+    },
+    "Meeting Name": {
+      "icon": "lucide-subtitles",
+      "color": "cyan"
+    },
+    "Name": {
+      "icon": "lucide-subtitles",
+      "color": "cyan"
+    },
+    "Note Name": {
+      "icon": "lucide-subtitles",
+      "color": "purple"
+    },
+    "Participants": {
+      "icon": "lucide-person-standing",
+      "color": "cyan"
+    },
+    "Project": {
+      "icon": "lucide-folder-dot",
+      "color": "orange"
+    },
+    "Related": {
+      "icon": "lucide-link",
+      "color": "orange"
+    },
+    "Role": {
+      "icon": "lucide-hat-glasses",
+      "color": "purple"
+    },
+    "Stage": {
+      "icon": "lucide-between-horizonal-start",
+      "color": "orange"
+    },
+    "Start Date": {
+      "color": "purple"
+    },
+    "Started": {
+      "color": "purple"
+    },
+    "Summary": {
+      "icon": "lucide-text-select",
+      "color": "orange"
+    },
+    "Team": {
+      "icon": "lucide-person-standing",
+      "color": "red"
+    },
+    "Technologies": {
+      "color": "orange"
+    },
+    "Topics": {
+      "icon": "lucide-bar-chart-horizontal-big",
+      "color": "orange"
+    },
+    "cssclasses": {
+      "color": "gray"
+    },
+    "tags": {
+      "color": "gray"
+    }
+  },
+  "ribbonIcons": {},
+  "fileRules": [
+    {
+      "id": "VWoHY",
+      "name": "Meeting",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "contains",
+          "value": "Meetings"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-message-square-text"
+    }
+  ],
+  "folderRules": [
+    {
+      "id": "t3v6v",
+      "name": "Projects",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Projects"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-book-text"
+    },
+    {
+      "id": "m2dBQ",
+      "name": "Archives",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Archives"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-archive"
+    },
+    {
+      "id": "4yR58",
+      "name": "Knowledge",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Knowledge"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-library-big"
+    },
+    {
+      "id": "3WcCi",
+      "name": "Media",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Media"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-image"
+    },
+    {
+      "id": "iCmO3",
+      "name": "Agenda",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Agenda"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-calendar-days"
+    },
+    {
+      "id": "JU0hl",
+      "name": "Templates",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Templates"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-file-spreadsheet"
+    },
+    {
+      "id": "3hUu5",
+      "name": "Bases",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "startsWith",
+          "value": "Bases"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-database"
+    },
+    {
+      "id": "Cliuq",
+      "name": "Clippings",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Clippings"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-clipboard-pen"
+    }
+  ]
+}

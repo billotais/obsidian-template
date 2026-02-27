@@ -13,17 +13,17 @@ views:
       property: Project
       direction: ASC
     order:
-      - Project
       - formula.Note Name
+      - Topics
       - Date
       - Summary
+      - Note Name
     sort:
       - property: Date
-        direction: ASC
+        direction: DESC
     limit: 100
     columnSize:
-      note.Project: 282
-      formula.Note Name: 477
+      formula.Note Name: 355
       note.Date: 179
       note.Summary: 478
   - type: table
@@ -47,8 +47,8 @@ views:
         direction: DESC
     columnSize:
       formula.Note Name: 311
-      note.Date: 234
-      note.Summary: 365
+      note.Date: 174
+      note.Summary: 441
   - type: table
     name: Topics View
     filters:
@@ -63,6 +63,8 @@ views:
         direction: DESC
       - property: Project
         direction: DESC
+    columnSize:
+      formula.Note Name: 328
   - type: table
     name: People View
     filters:
@@ -78,6 +80,9 @@ views:
         direction: ASC
       - property: Date
         direction: ASC
+    columnSize:
+      formula.Note Name: 325
+      note.Date: 186
   - type: table
     name: Modified Today
     filters:

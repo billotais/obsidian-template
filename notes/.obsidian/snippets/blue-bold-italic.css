@@ -1,0 +1,21 @@
+/* Italic text */
+.markdown-preview-view em,
+.cm-em {
+  color: #009ac0 !important;
+}
+
+/* Bold text */
+.markdown-preview-view strong,
+.cm-strong {
+  color: #009ac0 !important;
+}
+
+.markdown-preview-view a {
+  text-decoration: underline !important;
+}
+
+/* Links in editor/live preview */
+.cm-hmd-internal-link,
+.cm-link {
+  text-decoration: underline !important;
+}

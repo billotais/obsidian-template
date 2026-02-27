@@ -1,0 +1,277 @@
+{
+  "biggerIcons": "mobile",
+  "clickableIcons": "desktop",
+  "showAllFileIcons": false,
+  "showAllFolderIcons": false,
+  "minimalFolderIcons": true,
+  "showMarkdownTabIcons": true,
+  "showTitleIcons": true,
+  "showTagPillIcons": true,
+  "showMenuActions": true,
+  "showSuggestionIcons": true,
+  "showQuickSwitcherIcons": true,
+  "showMoveFileIcons": true,
+  "showItemName": "desktop",
+  "biggerSearchResults": "mobile",
+  "maxSearchResults": 50,
+  "colorPicker1": "list",
+  "colorPicker2": "rgb",
+  "uncolorHover": false,
+  "uncolorDrag": false,
+  "uncolorSelect": false,
+  "uncolorQuick": false,
+  "rememberDeletedItems": false,
+  "maxBackups": 5,
+  "dialogState": {
+    "iconMode": true,
+    "emojiMode": false,
+    "rulePage": "folder"
+  },
+  "appIcons": {},
+  "tabIcons": {},
+  "fileIcons": {
+    "Agenda": {
+      "icon": "lucide-calendar-days",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Archives": {
+      "icon": "lucide-archive-x",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Bases": {
+      "icon": "lucide-database",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Bases/Companies.base": {
+      "icon": "lucide-building-2",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Bases/Meetings.base": {
+      "icon": "lucide-messages-square",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Bases/Notes.base": {
+      "icon": "lucide-notebook",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Bases/People.base": {
+      "icon": "lucide-person-standing",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Bases/Projects.base": {
+      "icon": "lucide-book-text",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Bases/Tasks.base": {
+      "icon": "lucide-list-todo",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Bases/Topics.base": {
+      "icon": "lucide-bookmark",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Clippings": {
+      "icon": "lucide-clipboard-pen",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Knowledge": {
+      "icon": "lucide-library-big",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Knowledge/Companies": {
+      "icon": "lucide-building-2",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Knowledge/Concepts": {
+      "icon": "lucide-lightbulb",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Knowledge/People": {
+      "icon": "lucide-person-standing",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Media": {
+      "icon": "lucide-images",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Projects": {
+      "color": "gray",
+      "icon": "lucide-book-text",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    },
+    "Templates": {
+      "icon": "lucide-file-spreadsheet",
+      "unsynced": [
+        "ea45cbd8b99a3dd7"
+      ]
+    }
+  },
+  "bookmarkIcons": {},
+  "tagIcons": {},
+  "propertyIcons": {},
+  "ribbonIcons": {},
+  "fileRules": [
+    {
+      "id": "VWoHY",
+      "name": "Meeting",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "contains",
+          "value": "Meetings"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-message-square-text"
+    }
+  ],
+  "folderRules": [
+    {
+      "id": "t3v6v",
+      "name": "Projects",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Projects"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-book-text"
+    },
+    {
+      "id": "m2dBQ",
+      "name": "Archives",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Archives"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-archive"
+    },
+    {
+      "id": "4yR58",
+      "name": "Knowledge",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Knowledge"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-library-big"
+    },
+    {
+      "id": "3WcCi",
+      "name": "Media",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Media"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-image"
+    },
+    {
+      "id": "iCmO3",
+      "name": "Agenda",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Agenda"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-calendar-days"
+    },
+    {
+      "id": "JU0hl",
+      "name": "Templates",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Templates"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-file-spreadsheet"
+    },
+    {
+      "id": "3hUu5",
+      "name": "Bases",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "startsWith",
+          "value": "Bases"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-database"
+    },
+    {
+      "id": "Cliuq",
+      "name": "Clippings",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "path",
+          "operator": "is",
+          "value": "Clippings"
+        }
+      ],
+      "enabled": false,
+      "icon": "lucide-clipboard-pen"
+    }
+  ]
+}

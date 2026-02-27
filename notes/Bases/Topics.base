@@ -1,23 +1,29 @@
 filters:
   and:
     - file.tags.contains("Type/Topic")
+formulas:
+  Project Stage: Project.asFile().properties.Stage
 properties:
   file.name:
     displayName: Topic
 views:
   - type: table
     name: Table
+    groupBy:
+      property: Project
+      direction: ASC
     order:
       - file.name
-      - Project
       - Description
       - Started
       - Completed
+      - formula.Project Stage
     sort:
       - property: Project
         direction: ASC
     columnSize:
       note.Description: 569
+      note.Completed: 117
   - type: table
     name: Projects View
     filters:
@@ -29,9 +35,7 @@ views:
       - Started
       - Completed
     sort:
-      - property: Description
-        direction: ASC
-      - property: Topics
+      - property: file.name
         direction: ASC
     columnSize:
       file.name: 302

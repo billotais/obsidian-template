@@ -1,9 +1,17 @@
 {
   "accentColor": "#008cb4",
   "cssTheme": "Minimal",
-  "theme": "system",
+  "theme": "obsidian",
   "enabledCssSnippets": [
     "MCL Multi Column",
+    "blue-bold-italic",
     "MCL Wide Views"
-  ]
+  ],
+  "monospaceFontFamily": "Fira Code",
+  "baseFontSizeAction": true,
+  "baseFontSize": 18,
+  "textFontFamily": "Helvetica",
+  "showViewHeader": true,
+  "showRibbon": true,
+  "nativeMenus": true
 }
