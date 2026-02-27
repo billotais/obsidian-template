@@ -1,0 +1,90 @@
+filters:
+  and:
+    - or:
+        - file.tags.contains("Type/Topic")
+        - file.tags.contains("Type/Project")
+    - or:
+        - and:
+            - this.file.tags.contains("Type/Topic")
+            - or:
+                - note["Project"] == this.file.properties.Project
+                - note["Project"] == this.file.name
+                - file == this.file.properties.Project
+        - and:
+            - this.file.tags.contains("Type/Project")
+            - or:
+                - note["Project"] == this.file.name
+                - file == this.file
+        - and:
+            - this.file.tags.contains("Type/Person")
+            - or:
+                - note["Team"].contains(this.file.name)
+                - note["Manager"].contains(this.file.name)
+                - note["Client Team"].contains(this.file.name)
+                - note["Client Partner"].contains(this.file.name)
+        - and:
+            - this.file.tags.contains("Type/Company")
+            - or:
+                - Client == this.file.name
+                - Project.asFile().properties.Client == this.file.name
+        - and:
+            - this.file.tags.contains("Type/Concept")
+            - file.hasLink(this.file.name)
+        - and:
+            - or:
+                - this.file.tags.contains("Type/Note/Topic")
+                - this.file.tags.contains("Type/WeeklyLog")
+                - this.file.tags.contains("Type/Meeting")
+            - or:
+                - note["Project"] == this.file.properties.Project
+                - file == this.file.properties.Project
+        - and:
+            - this.file.tags.contains("Type/Note/Task")
+            - or:
+                - note["Project"] == this.file.properties.Project
+                - file == this.file.properties.Project
+        - and:
+            - this.file.tags.contains("Type/Note/Daily")
+            - note["Start Date"] < this.file.properties.Date
+            - or:
+                - note["Active"] == true
+                - note["End Date"] > this.file.properties.Date
+                - and:
+                    - note["End Date"].isEmpty()
+                    - note["Active"] == true
+formulas:
+  is_project: tags.contains("Type/Project").isTruthy()
+  name_without_company: file.name.split(" - ")[1]
+  Icon: if(formula.is_project, if(note["Stage"] == "40. Ongoing" || note["Stage"] == "20. Offer in progress", icon("folder-open"), if(note["Stage"] == "50. Finished", icon("folder-check"), if(note["Stage"] > "50. Finished", icon("folder-x"), icon("folder-dot")))), icon("lightbulb"))
+  Show: if(formula.is_project, link(file, formula.name_without_company), link(file, " ➜ " + formula.name_without_company))
+  Filter: if(formula.is_project, link(file, formula.name_without_company), link(file, note["Project"].asFile().name.split(" - ")[1] + " ➜ " + formula.name_without_company))
+  Explanation: if(formula.is_project, note["Summary"], note["Description"])
+  Client: if(formula.is_project, note["Client"], Project.asFile().properties.Client)
+properties:
+  formula.Show:
+    displayName: Name
+  formula.Explanation:
+    displayName: Description
+views:
+  - type: table
+    name: Projects & Topics
+    groupBy:
+      property: formula.Client
+      direction: ASC
+    order:
+      - formula.Icon
+      - formula.Show
+      - formula.Explanation
+    sort:
+      - property: formula.Filter
+        direction: ASC
+      - property: formula.Icon
+        direction: ASC
+      - property: End Date
+        direction: DESC
+      - property: Active
+        direction: DESC
+    columnSize:
+      formula.Icon: 59
+      formula.Show: 211
+    cardSize: 110

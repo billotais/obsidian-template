@@ -59,7 +59,24 @@
     "TQ_show_task_count": "checkbox",
     "TQ_show_tree": "checkbox",
     "TQ_show_urgency": "checkbox",
+    "sorting-spec": "multitext",
+    "Progress": "number",
+    "Departed": "checkbox",
+    "Division": "multitext",
     "Start Date": "date",
-    "End Date": "date"
+    "End Date": "date",
+    "excalidraw-embed-md": "checkbox",
+    "Role": "text",
+    "Priority": "text",
+    "Created On": "date",
+    "Due On": "date",
+    "Coordinates": "multitext",
+    "Industries": "multitext",
+    "Company Relation": "multitext",
+    "Client Team": "multitext",
+    "excalidraw-export-internal-links": "checkbox",
+    "Stage": "text",
+    "Participants": "multitext",
+    "Topics": "multitext"
   }
 }

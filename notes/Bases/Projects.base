@@ -26,6 +26,7 @@ views:
       - End Date
       - Summary
       - Team
+      - Client Team
       - Manager
       - Client Partner
     sort:
@@ -39,8 +40,9 @@ views:
       note.Stage: 184
       note.Start Date: 149
       note.End Date: 173
-      note.Summary: 438
-      note.Team: 479
+      note.Summary: 373
+      note.Team: 309
+      note.Client Team: 311
   - type: table
     name: Client View
     filters:
@@ -62,7 +64,10 @@ views:
       - property: Company
         direction: ASC
     columnSize:
-      note.Stage: 115
+      formula.Project Name: 152
+      note.Stage: 166
+      note.Start Date: 153
+      note.End Date: 152
       note.Team: 801
   - type: table
     name: People View
@@ -96,6 +101,7 @@ views:
       - property: Company
         direction: ASC
     columnSize:
+      note.Client: 141
       formula.Project Name: 195
       note.Stage: 171
       note.Summary: 371
@@ -134,7 +140,6 @@ views:
     filters:
       and:
         - Active == true
-        - Client != link("ELCA")
     order:
       - formula.Project Name
       - Client
@@ -167,7 +172,7 @@ views:
     name: Ongoing Projects
     filters:
       and:
-        - Stage == "Ongoing"
+        - Stage == "40. Ongoing"
     order:
       - formula.Project Name
       - Client
@@ -198,6 +203,39 @@ views:
       or:
         - Active == true
         - note["End Date"] > "2025-01-01"
+    groupBy:
+      property: Stage
+      direction: ASC
+    order:
+      - formula.Project Name
+      - Client
+      - Active
+      - Stage
+      - Start Date
+      - End Date
+      - Summary
+      - Team
+      - Manager
+    sort:
+      - property: formula.Project Name
+        direction: DESC
+      - property: Start Date
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: Company
+        direction: ASC
+    columnSize:
+      formula.Project Name: 235
+      note.Stage: 153
+      note.Summary: 626
+      note.Team: 725
+  - type: table
+    name: 2026 Projects
+    filters:
+      or:
+        - Active == true
+        - note["End Date"] > "2026-01-01"
     groupBy:
       property: Stage
       direction: ASC

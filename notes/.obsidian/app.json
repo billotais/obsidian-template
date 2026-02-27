@@ -8,8 +8,14 @@
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",
-    "downscalePercent": 74
+    "downscalePercent": 52
   },
   "userIgnoreFilters": null,
-  "promptDelete": false
+  "mobilePullAction": "switcher:open",
+  "promptDelete": false,
+  "showLineNumber": false,
+  "showIndentGuide": true,
+  "rightToLeft": false,
+  "propertiesInDocument": "visible",
+  "openBehavior": "daily"
 }

@@ -1,9 +1,11 @@
 ---
 tags:
   - Type/Company
+Industries:
+Logo:
+Company Relation:
 ---
-# Projects
-![[Projects.base#Client View]]
+
 
 # People
 ![[People.base#Company View]]

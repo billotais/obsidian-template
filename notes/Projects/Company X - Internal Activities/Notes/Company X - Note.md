@@ -1,11 +1,11 @@
 ---
 Project: "[[Company X - Internal Activities]]"
 Date: "[[2025-02-03]]"
-Topics: "[[Important Topic]]"
+Topics:
+  - "[[Company X - Important Topic]]"
+Note Name: 'Note'
 tags:
   - Type/Note/Topic
-Related:
-Archived: false
 Summary: Summary of note content
 ---
 

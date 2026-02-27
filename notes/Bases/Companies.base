@@ -1,0 +1,16 @@
+filters:
+  and:
+    - file.tags.contains("Type/Company")
+views:
+  - type: cards
+    name: Table
+    groupBy:
+      property: Industries
+      direction: ASC
+    order:
+      - file.name
+      - Industries
+      - Company Relation
+    columnSize:
+      file.name: 173
+    image: note.Logo

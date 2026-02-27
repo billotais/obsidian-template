@@ -1,0 +1,38 @@
+filters:
+  and:
+    - file.tags.contains("Type/Note/Task")
+    - or:
+        - note["Project"] == this.file.name
+        - note["Project"] == this.file.properties.Project
+        - note["Project"].asFile().properties.Client == this.file.name
+        - this.file.tags.contains("Type/Note/Daily")
+    - not:
+        - and:
+            - formula.Status == "Completed"
+            - note["Due On"] <= today() - "1w"
+formulas:
+  Task: link(file, Task)
+  Status: if(note["Task State"] == "✓" || note["Task State"] == "✘",     "Completed", if(note["Due On"] <= today() + "1d", "Urgent", if(note["Due On"]  - "1w" <= today(), "Next Week", "Later")))
+  Context: link(Project, Project.split(" - ")[0])
+views:
+  - type: table
+    name: Tasks
+    groupBy:
+      property: formula.Status
+      direction: DESC
+    order:
+      - formula.Context
+      - formula.Task
+      - Task State
+      - Due On
+      - Priority
+    sort:
+      - property: Due On
+        direction: ASC
+      - property: Task State
+        direction: ASC
+    columnSize:
+      formula.Context: 85
+      formula.Task: 252
+      note.Task State: 31
+      note.Due On: 148

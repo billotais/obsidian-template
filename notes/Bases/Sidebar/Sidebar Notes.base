@@ -1,0 +1,98 @@
+filters:
+  and:
+    - or:
+        - file.tags.contains("Type/Note/Topic")
+        - file.tags.contains("Type/Meeting")
+        - file.tags.contains("Type/WeeklyLog")
+    - or:
+        - Project == this.file.properties.project
+        - Project == this.file.name
+        - and:
+            - this.file.tags.contains("Type/Note/Daily")
+            - or:
+                - note["Date"] == this.file.properties.Date
+                - file.ctime == this.file.properties.Date
+                - file.mtime == this.file.properties.Date
+        - and:
+            - or:
+                - this.file.tags.contains("Type/Meeting")
+                - this.file.tags.contains("Type/Note/Topic")
+                - this.file.tags.contains("Type/Note/WeeklyLog")
+            - or:
+                - note["Project"] == this.file.properties.Project
+                - note["Project"] == this.file.name
+        - and:
+            - this.file.tags.contains("Type/Person")
+            - or:
+                - Participants.contains(this.file.name)
+                - file.hasLink(this.file.name)
+        - and:
+            - this.file.tags.contains("Type/Concept")
+            - file.hasLink(this.file.name)
+        - and:
+            - this.file.tags.contains("Type/Company")
+            - Project.asFile().properties.Client == this.file.name
+    - not:
+        - and:
+            - this.file.tags.contains("Type/Topic")
+            - "!Topics.contains(this.file.name)"
+        - and:
+            - this.file.tags.contains("Type/Topic")
+            - Topics.isEmpty()
+formulas:
+  Icon: if(tags.contains("Type/Meeting/Weekly"), icon("repeat-2"), if(tags.contains("Type/Meeting"), icon("person-standing"), if(tags.contains("Type/WeeklyLog"), icon("calendar-sync"), icon("notebook-pen"))))
+  Name: if(tags.contains("Type/Meeting"), link(file.name, note["Meeting Name"]), link(file.name, note["Note Name"]))
+  Parent: link(if(note["Topics"].isEmpty(), note["Project"], note["Topics"][0]), note["Project"].asFile().name + " / " + if(note["Topics"][0].asFile().name.split(" - ")[1].isEmpty(), "~", note["Topics"][0].asFile().name.split(" - ")[1]))
+views:
+  - type: table
+    name: Meetings & Notes
+    groupBy:
+      property: formula.Parent
+      direction: ASC
+    order:
+      - formula.Icon
+      - Date
+      - formula.Name
+    sort:
+      - property: Date
+        direction: DESC
+    columnSize:
+      formula.Icon: 39
+      note.Date: 138
+      formula.Name: 364
+  - type: table
+    name: Meetings
+    filters:
+      or:
+        - file.tags.contains("Type/Meeting")
+    groupBy:
+      property: formula.Parent
+      direction: ASC
+    order:
+      - formula.Name
+      - Date
+      - Participants
+    sort:
+      - property: Date
+        direction: DESC
+    columnSize:
+      formula.Name: 209
+      note.Date: 139
+  - type: table
+    name: Notes
+    filters:
+      or:
+        - file.tags.contains("Type/Note/Topic")
+    groupBy:
+      property: formula.Parent
+      direction: ASC
+    order:
+      - formula.Name
+      - Date
+      - Summary
+    sort:
+      - property: Date
+        direction: DESC
+    columnSize:
+      formula.Name: 210
+      note.Date: 142
