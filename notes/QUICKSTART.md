@@ -107,7 +107,7 @@ GROUP BY header
 
 ## UI
 
-The various sections of the UI can be customized and moved around freely. In the template, it is organized as follows
+The various sections of the UI can be customized and moved around freely. In the template, it is organized as follows:
 
 **Left side**
 - File explorer (can also show search)
@@ -116,6 +116,7 @@ The various sections of the UI can be customized and moved around freely. In the
 
 **Right side**
 - Calendar (can also show incoming/outgoing links, file properties and table options)
+- Context-aware Base navigation (Projects & Topics, Meetings & Notes, Tasks) — these automatically update based on the current note
 - Note outline (can also see local graph)
 - Recent files
 
@@ -137,68 +138,119 @@ You can also just export any page to a pdf.
 The `PAKMAT` structure defines how notes are organized.
 
 **`Projects`:** One folder per project, with the company and project name as the folder name. Each project folder contains:
-- `Company - Project.md`  : the main file for the project, containg the overview
-- `Meetings`: One file per meeting, with the meeting name and date as the file name
-- `Notes`: One file per note, with the company and note name as the file name
-- `Topics`: One file per topic, with the topic name as the file name
+- `Company - Project.md`  : the main file for the project, containing the overview
+- `Meetings/`: One file per meeting, with the meeting name and date as the file name
+- `Notes/`: One file per note, with the company and note name as the file name
+- `Topics/`: One file per topic, with the topic name as the file name
+- `Tasks/`: One file per task, with the task name and date as the file name
+- `Logs/`: Weekly log files summarizing project activity by week
 
-**`Archive`:** When a project is finished, I move its folder from the `Projects` folder to the `Archive` folder.
+**`Archives`:** When a project is finished, I move its folder from the `Projects` folder to the `Archives` folder.
 
 **`Knowledge`:** Contains all the general knowledge notes, with subfolders for:
   - `Companies`: One file per company
-  - `Concepts`: One file per concept
+  - `Concepts`: One file per concept (technologies, methodologies, etc.)
   - `People`: One file per person
-  
-**`Media`:** Used to store images, that I reuse across mutliple projects (e.g. icons)
+
+**`Media`:** Used to store images, that I reuse across multiple projects (e.g. icons)
 
 **`Agenda`:** Contains one file per day, with the date as the file name. This is where I keep my daily notes, giving me an overview of what I did each day and active tasks.
 
-**`Templates`:** Contains the templates files 
+**`Bases`:** Contains database views powered by Obsidian Bases (see the Navigation section below).
+
+**`Templates`:** Contains the Templater-powered templates for creating new notes
 
 ## How to use
 
-**Finding notes**
+### Finding notes
 
-I usually use the ctrl-O (cmd-O on MacOS) to quickly open a file. There, by typing the project/company name and some keywork from the note name I can usually find what I'm looking for. If not, I go through a project page or person page to see all related notes. As a last resort, I can also use the search.
+I usually use the **ctrl-O** (cmd-O on MacOS) to quickly open a file. There, by typing the project/company name and some keyword from the note name I can usually find what I'm looking for. If not, I go through a project page or person page to see all related notes. As a last resort, I can also use the search.
 
-**Creating notes**
+### Navigation with Bases
 
-My main interaction is through the **ctrl-N** (cmd-N on MacOs) shortcut to create a new note. I then select the template I want to use, and it asks me for various mandatory information depending on the type of note. This information is required as creation time as it is used to give the correct name to the new file, as save it to the correct folder.
+The vault uses **Obsidian Bases** (database views) for navigation. Bases are available both in the sidebar and as standalone views.
+
+**Sidebar navigation** (right side)
+
+The sidebar contains three context-aware bases that automatically update based on the note you are currently viewing:
+
+- **Projects & Topics**: Shows projects and topics relevant to the current context. When viewing a Person, it shows their projects; when viewing a Company, it shows that company's projects; when viewing a Concept, it shows projects using it. Projects are grouped by company and use icons to indicate their stage (open folder for ongoing, checkmark for finished, etc.).
+- **Meetings & Notes**: Shows meetings and notes related to the current context. When viewing a Project, it shows all meetings and notes for that project. Can be filtered to show only Meetings or only Notes using the view tabs.
+- **Tasks**: Shows tasks related to the current context, grouped by status (Urgent, Next Week, Later, Completed). Old completed tasks are automatically hidden.
+
+**Standalone bases** (in the `Bases/` folder)
+
+These provide full overview pages that you can open independently:
+
+- **Projects**: All projects with multiple views (by stage, by year, active only). Also provides contextual views embedded in Company, Person, and Concept pages.
+- **Companies**: Card view of all companies, grouped by industry.
+- **People**: All people grouped by company. Also provides a contextual view embedded in Company pages (showing active employees).
+- **Meetings**: Latest 100 meetings, with contextual views for Projects, People, Topics, and Daily notes.
+- **Notes**: Latest 100 notes, with contextual views for Projects, Topics, and People.
+- **Topics**: All discussion topics grouped by project.
+- **Tasks**: All active tasks grouped by smart status (based on due date and task state).
+
+**Contextual views**
+
+Many bases provide views that are embedded directly in other pages. For example:
+- Opening a **Company** page shows its active employees (People base) and related projects (Projects base)
+- Opening a **Person** page shows their projects, meetings, and notes
+- Opening a **Project** page shows its meetings, notes, topics, and tasks
+- Opening a **Concept** page shows all projects, meetings, and notes referencing it
+- Opening a **Daily note** shows meetings scheduled on that day
+
+### Creating notes
+
+My main interaction is through the **ctrl-N** (cmd-N on MacOS) shortcut to create a new note. I then select the template I want to use, and it asks me for various mandatory information depending on the type of note. This information is required at creation time as it is used to give the correct name to the new file and save it to the correct folder.
 
 - `Company`: Asks for the Company Name
 - `Person`: Asks for the Company, First Name and Last Name
-- `Project`: Asks the the Company and Project Name
-- `Note`: Asks for the Project and Note name
-- `Meeting`: Asks for the Project and Meeting name
-- `Concept`: Asks for the Concept name
-- `Topic`: Asks for the Project and Topic name
+- `Project`: Asks for the Company and Project Name
+- `Meeting`: Asks for the Project, Meeting Name, Date, and optionally a Topic
+- `Note`: Asks for the Project, Note Name, and optionally a Topic
+- `Task`: Asks for the Project and Task Name
+- `Topic`: Asks for the Project and Topic Name
+- `Concept`: Asks for the Concept Name
+- `Daily Note`: Automatically created with the current date (via the Calendar plugin)
+- `Weekly Log`: Asks for the Project, and uses the current ISO week
 
 The files will automatically be created in the correct folder, with the correct name. Folders are created automatically if they don't exist yet.
-When adding attachements like images or *escalidraw* diagrams, they will be automatically added to a `_attachments` folder in the same folder as the note.
+When adding attachments like images or *Excalidraw* diagrams, they will be automatically added to a `_attachments` folder in the same folder as the note.
 
-It is also possible to apply a template to a note with **alt-e**, for instance if a concept was first refered to by using the obsidian link synatx `[[Concept]]`, and that you the want to create the note for that concept.
+It is also possible to apply a template to a note with **alt-e**, for instance if a concept was first referred to by using the Obsidian link syntax `[[Concept]]`, and you then want to create the note for that concept.
 
 
-### Workflow example
+### Workflow examples
 
-**New project
-- Create `Company`
-- Create `Project`, add description
+**New project**
+- Create `Company` (if it doesn't exist yet)
+- Create `Project`, linking it to the company, and add a description
 
 **Complex topic for a specific project**
-- Create `Note`, linking it to the project
+- Create `Note`, linking it to the project and optionally a topic
 
 **Quick note for a project**
-- Go to daily view, add header with project and bullet point/task
+- Go to daily note, add a header with the project name and bullet points/tasks
 
 **Need to prepare a meeting**
-- Create `Meeting`, fill the *topics* section and add participants
+- Create `Meeting`, select the project, name, date, and optionally a topic
+- Fill the *Topics* section with discussion points and add participants
 
-**Search for latest meetig with [[John DOE]]:**
-- Go to the person's page and see all meetings
+**Search for latest meeting with [[John DOE]]**
+- Go to the person's page — the Meetings & Notes sidebar (or the embedded Meetings base view) shows all their meetings
 
-**See quick notes for a project**
-- Go to project page, under the *History* section in Daily activities
+**Track a task**
+- Create `Task`, linking it to the project
+- Set the Due Date and Priority in the frontmatter properties
+- Update the Task State when completed
+- View all tasks in the Tasks base, grouped by urgency
+
+**Review weekly progress**
+- Create `Weekly Log` for a project — it generates a Monday-to-Friday structure
+- Fill in daily activities, weekly summary, decisions, blockers, and next steps
+
+**Explore a concept across projects**
+- Open a `Concept` page — the contextual views automatically show all projects, meetings, and notes that reference it
 ## Plugins
 
 The template comes with a few plugins that I find essential for my workflow. Not all are required, but they all add some functionality that I find useful. 
@@ -207,7 +259,7 @@ The template comes with a few plugins that I find essential for my workflow. Not
 - **Calendar**: For easy access to the daily notes
 - **Custom File Explorer Sorting**: To keep the folders in the correct order
 - **Dataview**: For some queries in the various overview pages. Most queries are using Bases.
-- **Escalidraw**: My prefered drawing tool for obsidian. I use the ctrl+alt+D to create an embedded a new drawing in the current note.
+- **Excalidraw**: My preferred drawing tool for obsidian. I use the ctrl+alt+D to create and embed a new drawing in the current note.
 - **Folder Note**: To automatically create open the main folder note when opening a folder
 - **Iconize**: To add icons to the folders
 - **Minimal Theme Settings**: additonal settings for the minimal theme that I use
